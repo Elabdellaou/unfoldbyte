@@ -1,0 +1,1858 @@
+//max
+@media (max-width: 1399.99px) {
+    .header_modal_contact .none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1199.99px) {
+    .navbar .container-fluid {
+        background:linear-gradient(to right, #080808f5 0.68%, #0d0d0de1 51.89%) !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        padding-bottom: 5px;
+    }
+    #product-page,#project-page{
+        .section-7{
+            .img-1{
+                max-height: 50vh;
+                img{
+                    width:100%;
+                    max-height: 50vh;
+                }
+            }
+        }
+        .div-1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .div-2{
+            span:nth-child(even) {
+                text-align: right;
+            }
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.99px) {
+    #product-page,#project-page{
+        .section-7{
+            .img-2{
+                padding-top: 25px;
+                padding-bottom: 25px;
+                max-width:400px;
+                width:400px;
+            }
+        }
+        .section-3,.section-4,.section-6{
+            display:flex;
+            flex-direction:column-reverse;
+            .content-picture{
+                img{
+                    min-height: 50vh;
+                    max-height: 50vh;
+                }
+            }
+        }
+    }
+    #cursor{
+        width: 30px;
+        height: 30px;
+    }
+    .team .dev:nth-child(3) .clip_team,
+    .team .dev:nth-child(3) .clip_team>div {
+        clip-path: polygon(66% 17%, 89% 6%, 91% 24%, 100% 54%, 93% 94%, 81% 100%, 20% 88%, 0 72%, 8% 8%, 35% 0);
+    }
+
+    .team .dev:nth-child(4) .clip_team,
+    .team .dev:nth-child(4) .clip_team>div {
+        clip-path: polygon(7% 4%, 32% 18%, 70% 2%, 96% 12%, 100% 75%, 75% 93%, 16% 100%, 5% 93%, 0 52%, 6% 23%);
+    }
+
+    .products {
+
+        .content,
+        .img-project {
+            width: 100%;
+        }
+    }
+
+    #panels,
+    #panels2,
+    #panels3 {
+        width: 100% !important;
+    }
+
+    .about-4 .container-fluid {
+        height: max-content !important;
+        max-height: max-content !important;
+        min-height: max-content !important;
+    }
+}
+
+@media (max-width: 767.99px) {
+    #product-page,#project-page{
+        .footer{
+            a{
+                &::after,&::before{
+                    height: 2px;
+                }
+            }
+            svg{
+                display: none;
+            }
+        }
+    }
+    .header_project_mobile {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sub-project .header_project {
+        display: none !important;
+    }
+
+    .service-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            width: 75%;
+        }
+
+        .left-service {
+            width: 15%;
+        }
+
+        .right-service {
+            width: 85%;
+        }
+    }
+
+    .sub-project {
+        .hr {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 575.99px) {
+    .home-p p{
+        font-size: 50px !important;
+        line-height: 70px !important;
+        .line::after{
+            display: none;
+        }
+    }
+    #product-page,#project-page{
+        .span-4,.span-5,.span-6{
+            line-height: 50px;
+        }
+        .section-7{
+            .img-2{
+                padding-top: 25px;
+                max-width:100%;
+                width:100%;
+                max-width: 400px;
+                height: 100vh;
+                max-height:670px;
+            }
+        }
+        .title{
+            font-size: 40px;
+            line-height: 35px !important;
+        }
+        .p-m{
+            font-size: 18px !important;
+        }
+        .p-big{
+            font-size: 30px;
+        }
+        .footer{
+            .p-big-footer{
+                font-size: 40px;
+                line-height: 30px;
+            }
+        }
+    }
+    #cursor{
+        display: none;
+    }
+    .sub-project{
+        max-height: 1700px !important;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+        }
+    }
+    .modal {
+        input {
+            height: 50px;
+        }
+
+        textarea {
+            height: 100px;
+            min-height: 100px;
+            max-height: 125px;
+        }
+
+        button {
+            width: 110px !important;
+            height: 55px !important;
+        }
+    }
+
+    .modal p {
+        font-size: 14px !important;
+    }
+
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .btn-close.fs-1 {
+        font-size: 1.2rem !important;
+    }
+
+    .clip_contact {
+        width: 100%;
+        height: max-content;
+
+        &>div {
+            width: 100%;
+            height: max-content;
+        }
+    }
+
+    .sub-project {
+        .fs-2 {
+            font-size: 1.3rem !important;
+        }
+
+        .fs-4 {
+            font-size: 1rem !important;
+        }
+
+        .nav-link {
+            margin-left: 15px !important;
+
+            span:before {
+                font-size: 10px;
+                left: 50%;
+                top: -80%;
+            }
+        }
+    }
+
+    .contact-project {
+        width: 270px !important;
+        // height: ;
+    }
+
+    .btn-outline-unfold {
+        width: 100px;
+        height: 33px;
+        top: 52%;
+        font-size: 11px;
+    }
+
+    .ab-3 .fs-1 {
+        font-size: 0.9rem !important;
+    }
+
+    .fs-1 {
+        font-size: 1.1rem !important;
+    }
+
+    .fs-4 {
+        font-size: 0.55rem !important;
+    }
+
+    .about-4 {
+        .service div {
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-bottom: 1rem !important;
+            }
+        }
+
+        .body {
+            font-size: 0.9rem !important;
+            font-weight: 400;
+            margin-top: 1rem;
+        }
+
+        .fs-1 {
+            font-weight: 700;
+            font-size: 1.4rem !important;
+        }
+
+        .icon {
+            margin-right: 1rem !important;
+        }
+    }
+
+    nav .nav-link {
+        font-weight: 550;
+        font-size: 0.8rem;
+        line-height: 15px;
+    }
+
+    .navbar-toggler {
+        width: 47.1px;
+        height: 33.78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% !important;
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+
+        span {
+            .fa-bars {
+                height: 20px !important;
+            }
+
+            .fa-xmark {
+                height: 20px !important;
+            }
+        }
+    }
+
+    .logo-modal-contact,
+    #logo {
+        width: 29px;
+        height: 48.33px;
+    }
+
+    #loading,
+    #navigation {
+        .logo {
+            width: 29px;
+            height: 48.33px;
+
+            &::after,
+            &::before {
+                font-size: 29px;
+            }
+        }
+    }
+}
+
+@media(max-width:397.9) {
+    .sub-project{
+        max-height: 1450px !important;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+        }
+    }
+    .team .dev .clip_team {
+        width: 95%;
+    }
+
+    .team .dev .clip_team>div {
+        width: 93%;
+    }
+}
+
+@media (max-width:360px) {
+    .home-p p{
+        font-size: 40px !important;
+        line-height: 50px !important;
+    }
+    .sub-project{
+        max-height: 1400px !important;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+        }
+    }
+    .modal {
+        input {
+            height: 45px;
+        }
+
+        textarea {
+            height: 90px;
+            min-height: 90px;
+            max-height: 114px;
+        }
+    }
+
+    .team {
+        .fs-2 {
+            font-size: 1.2rem !important;
+        }
+
+        .fs-4 {
+            font-size: 1rem !important;
+        }
+    }
+
+    .service-content {
+        div {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:297.99px) {
+    .home-p p{
+        font-size: 30px !important;
+        line-height: 40px !important;
+    }
+    .sub-project .project_animate {
+        max-height: 1000px !important;
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+        }
+    }
+    .modal p {
+        font-size: 13px !important;
+    }
+
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    .team .dev .clip_team {
+        height: 165px;
+        width: 98%;
+    }
+
+    .team .dev .clip_team>div {
+        height: 158px;
+        width: 97%;
+    }
+
+    .products {
+        .product-type div {
+            width: 90px;
+            height: 40px;
+            font-size: 11px;
+        }
+
+        .role {
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        .body {
+            margin-top: 1rem;
+            font-size: 11px;
+        }
+
+        .product-title {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+    .sub-project {
+        .fs-2 {
+            font-size: 1.1rem !important;
+        }
+
+        .fs-4 {
+            font-size: 0.9rem !important;
+        }
+    }
+
+    .sub-product .product-1,
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        p {
+            &:nth-child(1) {
+                line-height: 25px;
+            }
+
+            &:nth-child(2) {
+                line-height: 20px;
+            }
+        }
+
+        &::before {
+            font-weight: 700;
+            font-size: 45px;
+            top: 37%;
+        }
+    }
+
+    .sub-team .team-2 {
+        &::before {
+            font-weight: 700 !important;
+            font-size: 60px !important;
+            top: 37% !important;
+        }
+    }
+
+    .sub-product .product-1 {
+        &::before {
+            top: 36.5% !important;
+        }
+
+        &::after {
+            top: 48.5% !important;
+        }
+
+        &::before,
+        &::after {
+            font-size: 70px !important;
+            font-weight: 700 !important;
+        }
+    }
+
+    .sub-about .about-3::before {
+        top: 37.5%;
+    }
+
+    .about-4 {
+        .body {
+            font-size: 0.75rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1.3rem !important;
+        }
+    }
+
+    .sub-team {
+        .fs-5 {
+            font-size: 0.45rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1rem !important;
+        }
+    }
+
+    .sub-about {
+        .ab-3 .fs-1 {
+            font-size: 0.7rem !important;
+        }
+
+        .fs-5 {
+            font-size: 0.35rem !important;
+        }
+
+        .fs-1 {
+            font-size: 0.95rem !important;
+        }
+    }
+
+    .logo-modal-contact,
+    #logo {
+        width: 20px;
+        height: 33.78px;
+    }
+
+    #loading,
+    #navigation {
+        .logo {
+            width: 20px;
+            height: 33.78px;
+
+            &::after,
+            &::before {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .clip_home {
+        width: 260px;
+        height: 180px;
+    }
+}
+
+//minpx
+@media (min-width:298px) {
+    .me-u5 {
+        margin-right: 0px;
+    }
+
+    .team .dev .clip_team {
+        width: 285px;
+        height: 176px;
+    }
+
+    .team .dev .clip_team>div {
+        width: 280px;
+        height: 170px;
+    }
+
+    .products {
+        .product-type div {
+            width: 100px;
+            height: 43px;
+            font-size: 12px;
+        }
+
+        .role {
+            font-size: 13px;
+            line-height: 13px;
+        }
+
+        .body {
+            margin-top: 1rem;
+            font-size: 12px;
+        }
+
+        .product-title {
+            font-size: 30px;
+            line-height: 45px;
+        }
+    }
+
+    .sub-product .product-1 {
+        &::before {
+            top: 35% !important;
+        }
+
+        &::after {
+            top: 48.5% !important;
+            ;
+        }
+
+        &::before,
+        &::after {
+            font-size: 80px !important;
+            font-weight: 700 !important;
+        }
+    }
+
+    .sub-product .product-1,
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        p {
+            &:nth-child(1) {
+                line-height: 30px;
+            }
+
+            &:nth-child(2) {
+                line-height: 20px;
+            }
+        }
+
+        &::before {
+            font-weight: 700;
+            font-size: 50px;
+            top: 36%;
+        }
+    }
+
+    .sub-team .team-2 {
+        &::before {
+            font-weight: 700 !important;
+            font-size: 70px !important;
+            top: 35% !important;
+        }
+    }
+
+    .sub-team {
+        .fs-5 {
+            font-size: 0.5rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1.1rem !important;
+        }
+    }
+
+    .sub-about .about-3::before {
+        top: 35.5%;
+    }
+
+    .sub-about {
+        .fs-5 {
+            font-size: 0.48rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1rem !important;
+        }
+    }
+
+    .clip_home {
+        width: 275px;
+        height: 184.5px;
+    }
+}
+
+@media (min-width:398px) {
+    .team .dev .clip_team {
+        width: 380px;
+        height: 234.4px;
+    }
+
+    .team .dev .clip_team>div {
+        width: 374px;
+        height: 227px;
+    }
+
+    .sub-about .about-3::before {
+        top: 37%;
+    }
+}
+
+@media (min-width: 576px) {
+    .home-p p{
+        font-size: 60px !important;
+        line-height: 80px !important;
+        .line::after{
+            transform: translate(-50%,-30%);
+        }
+    }
+    #project-page,#product-page{
+        .span-4,.span-5,.span-6{
+            line-height: 60px;
+        }
+        .title{
+            font-size: 56px;
+            line-height: 50px !important;
+        }
+        .p-m{
+            font-size: 18px !important;
+        }
+        .p-big{
+            font-size: 30px;
+        }
+        .footer{
+            .p-big-footer{
+                font-size: 50px;
+                line-height: 30px;
+            }
+        }
+    }
+    .sub-project .project_animate{
+        max-height: 1840px !important;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4.5px;
+        }
+    }
+    .modal {
+        input {
+            height: 60px;
+        }
+
+        textarea {
+            height: 120px;
+            min-height: 120px;
+            max-height: 150px;
+        }
+
+        button {
+            width: 122px !important;
+            height: 60px !important;
+        }
+    }
+
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .clip_contact>div {
+        width: 100%;
+        height: max-content;
+    }
+
+    .modal-dialog {
+        max-width: 100% !important;
+    }
+
+    .me-u5 {
+        margin-right: 15px;
+    }
+
+    .team .dev .clip_team {
+        width: 438px;
+        height: 305px;
+    }
+
+    .team .dev .clip_team>div {
+        width: 432px;
+        height: 297px;
+    }
+
+    .products {
+        .product-type div {
+            width: 112px;
+            height: 50px;
+            font-size: 15px;
+        }
+
+        .role {
+            font-size: 15px;
+            line-height: 15px;
+        }
+
+        .body {
+            font-size: 15px;
+        }
+
+        .product-title {
+            font-size: 40px;
+            line-height: 55px;
+        }
+    }
+
+    .sub-project {
+        .fs-2 {
+            font-size: 1.3rem !important;
+        }
+
+        .fs-4 {
+            font-size: 1rem !important;
+        }
+
+        .mr-unfold {
+            margin-right: 15px;
+        }
+    }
+
+    .btn-outline-unfold {
+        width: 157px;
+        height: 50px;
+        top: 55%;
+        font-size: 15px;
+    }
+
+    .about-4 {
+        .service div {
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-bottom: 1rem !important;
+            }
+        }
+
+        .body {
+            font-size: 0.9rem !important;
+            font-weight: 400;
+            margin-top: 1rem;
+        }
+
+        .fs-1 {
+            font-weight: 700;
+            font-size: 1.5rem !important;
+        }
+
+        .icon {
+            margin-right: 1rem !important;
+        }
+    }
+
+    .sub-product .product-1 {
+
+        &::after,
+        &::before {
+            font-size: 110px !important;
+        }
+
+        &::after {
+            top: 47% !important;
+        }
+
+        &::before {
+            top: 30% !important;
+        }
+    }
+
+    .sub-product .product-1,
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        p {
+            &:nth-child(1) {
+                line-height: 35px;
+            }
+
+            &:nth-child(2) {
+                line-height: 25px;
+            }
+        }
+
+        &::before {
+            font-size: 100px;
+            top: 33%;
+        }
+    }
+
+    .sub-team .team-2 {
+        &::before {
+            font-size: 120px !important;
+            top: 31% !important;
+        }
+    }
+
+    .sub-team {
+        .fs-5 {
+            font-size: 0.7rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1.65rem !important;
+        }
+    }
+
+    .sub-about .about-3::before {
+        top: 33%;
+    }
+
+    .sub-about {
+        .fs-5 {
+            font-size: 0.65rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1.5rem !important;
+        }
+    }
+
+    nav .nav-link {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 18px;
+    }
+
+    .logo-modal-contact,
+    #logo {
+        width: 35px;
+        height: 58.33px;
+    }
+
+    #loading,
+    #navigation {
+        .logo {
+            width: 35px;
+            height: 58.33px;
+
+            &::after,
+            &::before {
+                font-size: 35px;
+            }
+        }
+    }
+
+    .clip_home {
+        width: 400px;
+        height: 268.5px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .home-p p{
+        font-size: 70px !important;
+        line-height: 90px !important;
+    }
+    #product-page,#project-page{
+        .title{
+            font-size: 80px;
+        }
+        .footer{
+            a{
+                &::after,&::before{
+                    height: 3px;
+                }
+            }
+        }
+    }
+    .sub-project .project_animate{
+        max-height: 2340px !important;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+        }
+    }
+    // .modal {
+
+    //     input,
+    //     textarea {
+    //         width: 75% !important;
+    //     }
+    // }
+
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .me-u5 {
+        margin-right: 30px;
+    }
+
+    .header_project_mobile {
+        display: none !important;
+    }
+
+    .service .service-content {
+        display: flex;
+
+        div {
+            width: 85%;
+        }
+
+        .left-service {
+            width: 15%;
+        }
+
+        .right-service {
+            width: 85%;
+        }
+    }
+
+    .service .service-content {
+        &:nth-child(odd) {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &:nth-child(even) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .products {
+        .role {
+            line-height: 20px;
+        }
+
+        .body {
+            font-size: 20px;
+            margin-top: 0rem;
+        }
+
+        .product-title {
+            font-size: 50px;
+            line-height: 80px;
+        }
+    }
+
+    .sub-project {
+        .fs-2 {
+            font-size: 1.5rem !important;
+        }
+
+        .fs-4 {
+            font-size: 1.2rem !important;
+        }
+
+        .mr-unfold {
+            margin-right: 30px;
+        }
+
+        .nav-link {
+            span:before {
+                font-size: 11px;
+                left: 50%;
+                top: -100%;
+            }
+        }
+    }
+
+    .about-4 {
+        .service div {
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 2rem !important;
+            }
+        }
+    }
+
+    .sub-product .product-1 {
+
+        &::after,
+        &::before {
+            font-size: 140px !important;
+        }
+
+        &::after {
+            top: 45% !important;
+        }
+
+        &::before {
+            top: 26% !important;
+        }
+    }
+
+    .sub-product .product-1,
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        p {
+            &:nth-child(1) {
+                line-height: 40px;
+            }
+        }
+
+        &::before {
+            font-size: 130px;
+            top: 30%;
+        }
+    }
+
+    .sub-about .about-3::before {
+        top: 31%;
+    }
+
+    .sub-team .team-2 {
+        &::before {
+            font-size: 150px !important;
+            top: 29.5% !important;
+        }
+    }
+
+    .sub-team {
+        .fs-5 {
+            font-size: 0.75rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1.75rem !important;
+        }
+    }
+
+    .sub-about {
+        .fs-5 {
+            font-size: 0.72rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1.75rem !important;
+        }
+    }
+
+    .logo-modal-contact,
+    #logo {
+        width: 40px;
+        height: 66.66px;
+    }
+
+    #loading,
+    #navigation {
+        .logo {
+            width: 40px;
+            height: 66.66px;
+
+            &::after,
+            &::before {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .clip_home {
+        width: 574px;
+        height: 385px;
+    }
+}
+
+@media (min-width: 992px) {
+    .product-2,.product-3,.product-4{
+        min-height: 100vh !important;
+    }
+    #product-page,#project-page{
+        .span-4,.span-5,.span-6{
+            line-height: 70px;
+        }
+        .section-pr,.section-2{
+            display: flex;
+            flex-direction: row;
+            p{
+                width: 50%;
+            }
+        }
+        .section-3,.section-4,.section-6{
+            display:flex;
+            flex-direction: row;
+            div{
+                width:50%;
+                div{
+                    width: 100%;
+                }
+            }
+        }
+        .section-7{
+            // .img-1{
+            //     width: 75%;
+            // }
+            .img-2{
+                padding-top: 25px;
+                max-width:50%;
+                width:50%;
+                height:100vh;
+                max-height: 670px;
+            }
+        }
+        .container-fluid {
+            button{
+                max-width: 150px !important;
+                max-height: 43px !important;
+            }
+        }
+        .title{
+            font-size: 96px;
+            line-height: 85px !important;
+        }
+        .p-m{
+            font-size: 24px !important;
+        }
+        .p-big{
+            font-size: 40px;
+        }
+        .p-small{
+            font-size: 20px;
+        }
+        .footer{
+            .p-big-footer{
+                font-size: 60px;
+                line-height: 40px;
+            }
+        }
+    }
+    #cursor{
+        width: 40px;
+        height: 40px;
+    }
+    section{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sub-project .project_animate{
+        max-height: 1215px !important;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+        }
+    }
+    .modal {
+        .none {
+            width: 141px !important;
+        }
+
+        input,
+        textarea {
+            width: 100% !important;
+        }
+
+        button {
+            width: 133px !important;
+            height: 67px !important;
+        }
+    }
+
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .me-u5 {
+        margin-right: 45px;
+    }
+
+    .team .dev .clip_team {
+        width: 400px;
+        height: 277.6px;
+    }
+
+    .team .dev .clip_team>div {
+        width: 394px;
+        height: 271px;
+    }
+
+    .team .dev:nth-child(3) .clip_team,
+    .team .dev:nth-child(3) .clip_team>div {
+        clip-path: polygon(20% 14%, 82% 0, 93% 7%, 100% 46%, 94% 78%, 93% 100%, 66% 86%, 34% 100%, 8% 90%, 0 26%);
+    }
+
+    .team .dev:nth-child(4) .clip_team,
+    .team .dev:nth-child(4) .clip_team>div {
+        clip-path: polygon(17% 0, 73% 9%, 100% 24%, 96% 93%, 75% 100%, 42% 90%, 8% 100%, 7% 82%, 0 53%, 8% 7%);
+    }
+
+    .products {
+        .product-title {
+            line-height: 90px;
+        }
+    }
+
+    .products {
+        .content {
+            width: 35%;
+        }
+
+        .img-project {
+            width: 65%;
+        }
+    }
+
+    .sub-project {
+        .fs-2 {
+            font-size: 2rem !important;
+        }
+
+        .fs-4 {
+            font-size: 1.5rem !important;
+        }
+
+        .mr-unfold {
+            margin-right: 40px;
+        }
+
+        .nav-link {
+            span:before {
+                font-size: 12px;
+                left: 50%;
+                top: -100%;
+            }
+        }
+    }
+
+    .about-4 {
+        .service div {
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 2.5rem !important;
+            }
+        }
+    }
+
+    .about-4 .container-fluid {
+        height: 100vh !important;
+        max-height: 100vh !important;
+        min-height: 100vh !important;
+    }
+
+    .sub-product .product-1 {
+
+        &::after,
+        &::before {
+            font-size: 190px !important;
+        }
+
+        &::after {
+            top: 43% !important;
+        }
+
+        &::before {
+            top: 19% !important;
+        }
+    }
+
+    .sub-product .product-1,
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        p {
+            &:nth-child(1) {
+                line-height: 53px;
+            }
+
+            &:nth-child(2) {
+                line-height: 30px;
+            }
+        }
+
+        &::before {
+            font-size: 170px;
+            top: 23.5%;
+        }
+    }
+
+    .sub-team .team-2 {
+        &::before {
+            font-size: 185px !important;
+            top: 24% !important;
+        }
+    }
+
+    .sub-about .about-3::before {
+        top: 24.8%;
+    }
+
+    #loading,
+    #navigation {
+        .logo {
+            width: 48px;
+            height: 80px;
+
+            &::after,
+            &::before {
+                font-size: 48px;
+            }
+        }
+    }
+
+    #panels,
+    #panels2,
+    #panels3,
+    #panels4 {
+        width: 200% !important;
+        height: 100vh !important;
+    }
+
+    .sub-team {
+        .fs-5 {
+            font-size: 0.85rem !important;
+        }
+
+        .fs-1 {
+            font-size: 2rem !important;
+        }
+    }
+
+    .sub-about {
+        .fs-5 {
+            font-size: 0.85rem !important;
+        }
+
+        .fs-1 {
+            font-size: 1.85rem !important;
+        }
+    }
+
+    #nav-load {
+        position: relative;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+
+    nav .nav-link {
+        font-weight: 700;
+        // font-size: 1.2rem;
+        line-height: 21px;
+    }
+
+    .logo-modal-contact {
+        width: 48px;
+        height: 80px;
+    }
+
+    #logo {
+        position: relative;
+        width: 48px;
+        height: 80px;
+
+        svg {
+            position: absolute;
+            transform: translateY(-30%);
+            top: 50%;
+            left: 0%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .home-p p{
+        font-size: 80px !important;
+        line-height: 110px !important;
+        .line::after{
+            transform: translate(-50%,-30%);
+        }
+    }
+    #product-page,#project-page{
+        .span-4,.span-5,.span-6{
+            line-height: 80px;
+        }
+        .section-7{
+            height:100vh;
+            position: relative;
+            .img-1{
+                img{
+                    width: 80% !important;
+                }
+            }
+            .img-2{
+                position:absolute ;
+                max-width: 37%;
+                top:30%;
+                width: 30%;
+                right:0%;
+                height:65% !important;
+                min-height:65% !important;
+            }
+        }
+        .p-big{
+            font-size: 48px;
+        }
+    }
+    .sub-project .project_animate{
+        max-height: 1222px !important;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+    }
+    .me-u5 {
+        margin-right: 55px;
+    }
+
+    .modal p {
+        font-size: 20px !important;
+        line-height: 26px !important;
+    }
+
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 35px;
+        line-height: 48px;
+    }
+
+    .team .dev .clip_team {
+        width: 438px;
+        height: 305px;
+    }
+
+    .team .dev .clip_team>div {
+        width: 432px;
+        height: 297px;
+    }
+
+    .products {
+        .product-title {
+            font-size: 60px;
+            line-height: 103px;
+        }
+    }
+
+    .sub-project {
+        .nav-link {
+            span:before {
+                font-size: 13px;
+                top: -150%;
+            }
+        }
+    }
+
+    .about-4 {
+        // .service {
+
+        //     &:nth-child(1),
+        //     &:nth-child(2) {
+        //         margin-bottom: 3rem !important;
+        //     }
+
+        //     &:nth-child(1),
+        //     &:nth-child(3) {
+        //         margin-right: 1.2rem !important;
+        //     }
+        // }
+
+        .body {
+            font-size: 1rem !important;
+            margin-top: 1.2rem;
+        }
+
+        .fs-1 {
+            font-size: 2.5rem !important;
+        }
+
+        .icon {
+            margin-right: 0.75rem !important;
+        }
+    }
+
+    .sub-team,
+    .sub-about {
+        .fs-5 {
+            font-size: 1rem !important;
+        }
+
+        .fs-1 {
+            font-size: 2.4rem !important;
+        }
+    }
+
+    .sub-product .product-1 {
+
+        &::after,
+        &::before {
+            font-size: 200px !important;
+        }
+
+        &::after {
+            top: 42% !important;
+        }
+
+        &::before {
+            top: 19% !important;
+        }
+    }
+
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        &::before {
+            font-size: 200px;
+            top: 19%;
+        }
+    }
+
+    .sub-team .team-2 {
+        &::before {
+            font-size: 230px;
+            top: 19%;
+        }
+    }
+
+    .clip_home {
+        width: 745px;
+        height: 500px;
+    }
+
+    .mr-unfold {
+        margin-right: 60px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .home-p p{
+        font-size: 100px !important;
+        line-height: 130px !important;
+        .line::after{
+            transform: translate(-50%);
+        }
+    }
+    .sub-project .project_animate{
+        max-height: 1234px !important;
+        &::-webkit-scrollbar {
+            width: 11px;
+        }
+    }
+    .me-u5 {
+        margin-right: 65px;
+    }
+
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 37px;
+        line-height: 51px;
+    }
+
+    .project {
+        .img {
+            a {
+                font-size: 3rem !important;
+            }
+        }
+    }
+
+    // .sub-project {
+    //     .fs-2 {
+    //         font-size: 2.25rem !important;
+    //     }
+
+    //     .fs-4 {
+    //         font-size: 1.75rem !important;
+    //     }
+    // }
+
+    .mr-unfold {
+        margin-right: 65px !important;
+    }
+
+    .about-4 {
+        .body {
+            margin-top: 1.2rem;
+        }
+    }
+
+    .sub-about {
+        .fs-5 {
+            font-size: 1rem !important;
+        }
+
+        .fs-1 {
+            font-size: 2.4rem !important;
+        }
+    }
+
+    .sub-team {
+        .fs-5 {
+            font-size: 1.05rem !important;
+        }
+
+        .fs-1 {
+            font-size: 2.5rem !important;
+        }
+    }
+
+    .sub-product .product-1 {
+
+        &::after,
+        &::before {
+            font-size: 228px !important;
+        }
+
+        &::after {
+            top: 40% !important;
+        }
+
+        &::before {
+            top: 15% !important;
+        }
+    }
+
+    .sub-product .product-1,
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        p {
+            &:nth-child(1) {
+                line-height: 60px;
+            }
+        }
+
+        &::before {
+            font-size: 228px;
+            top: 20%;
+        }
+    }
+
+    .sub-team .team-2 {
+        &::before {
+            font-size: 245px !important;
+            top: 21% !important;
+        }
+    }
+
+    .sub-about .about-3::before {
+        top: 17%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .home-p p{
+        font-size: 120px !important;
+        line-height: 164px !important;
+    }
+    .sub-project .project_animate{
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 6px;
+        }
+    }
+    .nav_interested span,
+    .nav_project_type span {
+        font-size: 40px;
+        line-height: 51px;
+    }
+
+    .modal {
+        .modal-content.container {
+            width: 1470px !important;
+            max-width: 1470px !important;
+            height: 876px !important;
+            background-color: white !important;
+            .clip_contact{
+                width: 1465px !important;
+                max-width: 1465px !important;
+                padding-left: 5rem !important;
+                padding-right: 5rem !important;
+                height: 870px !important;
+            }
+        }
+        .modal-content.container,.clip_contact{
+            clip-path: polygon(45% 3%, 73% 0, 91% 2%, 99% 0, 100% 17%, 99% 44%, 100% 73%, 98% 98%, 84% 96%, 65% 100%,40% 100%,15% 95%,0% 90%,2% 70%,0% 20%, 0 3%, 19% 0);
+        }
+    }
+
+    .navbar .container-fluid {
+        width: 90% !important;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+    .container-fluid{
+        width: 85% !important;
+    }
+    #team,#about{
+        height: 100vh !important;
+        .container-fluid{
+            width: 70% !important;
+        }
+    }
+    .sub-about .about-1,
+    .sub-about .about-2 {
+        &::before {
+            top: 20%;
+        }
+    }
+
+    .sub-about .about-3 {
+        &::before {
+            top: 21%;
+        }
+    }
+
+    .sub-product .product-1 {
+
+        &::after,
+        &::before {
+            font-size: 249px !important;
+        }
+
+        &::after {
+            top: 40% !important;
+        }
+
+        &::before {
+            top: 13% !important;
+        }
+    }
+}

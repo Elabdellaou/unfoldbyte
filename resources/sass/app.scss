@@ -1,0 +1,23 @@
+// Variables
+@import 'variables';
+
+// Fonts
+@font-face {
+    src:url("../fonts/F37 Ginger Regular.ttf");
+    font-family:"F37 Ginger";
+    font-style:Regular;
+}
+body{
+    font-family: "F37 Ginger" !important;
+}
+
+//styles
+@import 'global.scss';
+@import 'style.scss';
+@import 'media.scss';
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
