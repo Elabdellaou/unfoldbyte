@@ -16,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,"index"])->name("unfoldbyte");
 Route::post('contact',[ContactController::class,"store"]);
-Route::get('project/drive',[ProjectController::class,"drive"])->name("Project-drive");
-Route::get('product/drive',[ProductController::class,"drive"])->name("Product-drive");
+Route::get('project/Optic',[ProjectController::class,"Optic"])->name("Project-Optic");
+Route::get('product/Optic',[ProductController::class,"Optic"])->name("Product-Optic");
+Route::get('product/SafeChat',[ProductController::class,"Safe"])->name("Product-SafeChat");
+Route::get('product/Drive',[ProductController::class,"Drive"])->name("Product-Drive");
+Route::get('project/Point',[ProjectController::class,"Point"])->name("Project-Point");
+Route::get('project/SelfEducation',[ProjectController::class,"SelfEducation"])->name("Project-SelfEducation");

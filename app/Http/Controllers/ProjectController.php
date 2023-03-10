@@ -10,7 +10,13 @@ class ProjectController extends Controller
     {
 
     }
-    public function drive(){
-        return view('project.drive');
+    public function Optic(){
+        return view('project.optic');
+    }
+    public function SelfEducation(){
+        return view('project.education');
+    }
+    public function Point(){
+        return view('project.point');
     }
 }

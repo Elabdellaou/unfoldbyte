@@ -15,6 +15,14 @@
                 <link rel="stylesheet" href="{{ asset('Links/css/login1.css') }}">
         <!-- Styles -->
         <style>
+            ::-webkit-scrollbar{
+    display: none;
+}
+body{
+    overflow: hidden !important;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+}
                svg#freepik_stories-500-internal-server-error:not(.animated) .animable {opacity: 0;}
             svg#freepik_stories-500-internal-server-error.animated #freepik--background-complete--inject-53
             {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideLeft;animation-delay: 0s;}

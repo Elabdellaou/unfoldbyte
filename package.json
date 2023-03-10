@@ -21,7 +21,8 @@
     "sass-loader": "^11.1.1"
   },
   "dependencies": {
-    "gsap": "^3.11.3"
+    "gsap": "^3.11.3",
+    "scrollreveal": "^4.0.9"
   },
   "name": "ufoldbyte-site",
   "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\" alt=\"Laravel Logo\"></a></p>",

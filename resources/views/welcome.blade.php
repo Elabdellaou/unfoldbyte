@@ -4,7 +4,6 @@
     @include('includes.loading')
     @include('includes.header')
     <main class="w-100">
-        <div id="panels" class="row row-cols-1 row-cols-lg-2">
             <section id="home" class="d-flex justify-content-center vh-100 align-items-center" data-element="home">
                 <div class="container-fluid home-p">
                     <p class="text-center"><span class="cursor-big">Turn Your</span></p>
@@ -12,9 +11,9 @@
                     <p class="text-center"><span class="cursor-big">into <span class="text-unfold">{reality}</span></span></p>
                 </div>
             </section>
-            <section class="title-page justify-content-center vh-100 d-flex justify-content-lg-around flex-column align-items-center" id="about"
+            <section class="title-page vh-100" id="about"
                 data-element="about">
-                <div class="container-fluid">
+                <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
                     <svg viewBox="0 0 1244 650" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M0 414H56.8359L80.8594 350.719H208.398L232.812 414H289.648L171.68 117.906H118.359L0 414ZM99.6094 300.719L144.727 183.141L189.648 300.719H99.6094ZM319.531 414H368.75V401.695C383.203 413.414 400.781 419.273 421.484 419.273C439.844 419.273 456.641 414.977 472.266 405.992C487.695 397.008 499.805 384.898 508.789 369.664C517.773 354.43 522.266 337.633 522.266 319.664C522.266 292.125 512.305 268.688 492.773 249.352C473.242 230.211 449.414 220.445 421.484 220.445C400.781 220.445 383.203 226.305 368.75 238.023V117.906H319.531V414ZM368.75 322.008V317.516C369.336 304.039 374.805 292.32 384.961 282.359C395.117 272.594 407.422 267.516 421.484 267.516C435.742 267.516 448.047 272.789 458.398 283.141C468.555 293.492 473.828 305.602 473.828 319.664C473.828 333.922 468.555 346.227 458.398 356.578C448.047 366.93 435.742 372.008 421.484 372.008C407.422 372.008 395.117 367.125 384.961 357.359C374.805 347.594 369.336 335.68 368.75 322.008ZM554.297 319.664C554.297 337.633 558.594 354.43 567.578 369.664C576.562 384.898 588.672 397.008 604.297 405.992C619.727 414.977 636.719 419.273 655.078 419.273C673.438 419.273 690.43 414.977 706.055 405.992C721.68 397.008 733.789 384.898 742.773 369.664C751.758 354.43 756.25 337.633 756.25 319.664C756.25 301.695 751.758 284.898 742.773 269.664C733.789 254.43 721.68 242.516 706.055 233.727C690.43 224.938 673.438 220.445 655.078 220.445C626.953 220.445 603.125 230.211 583.594 249.352C564.062 268.688 554.297 292.125 554.297 319.664ZM602.539 319.664C602.539 305.602 607.617 293.492 617.969 283.141C628.32 272.789 640.625 267.516 655.078 267.516C669.531 267.516 682.031 272.789 692.383 283.141C702.539 293.492 707.812 305.602 707.812 319.664C707.812 333.922 702.539 346.227 692.383 356.578C682.031 366.93 669.531 372.008 655.078 372.008C640.625 372.008 628.32 366.93 617.969 356.578C607.617 346.227 602.539 333.922 602.539 319.664ZM796.289 335.68C796.289 364.391 804.102 385.484 819.727 398.961C835.352 412.633 857.422 419.273 885.547 419.273C913.672 419.273 935.547 412.633 951.172 398.961C966.797 385.484 974.805 364.391 974.805 335.68V223.961H925.586V322.398C925.586 339.977 922.852 352.477 917.383 360.289C911.914 368.102 901.367 372.008 885.547 372.008C869.531 372.008 858.984 368.102 853.516 360.289C848.047 352.477 845.508 339.977 845.508 322.398V223.961H796.289V335.68ZM1008.79 271.227H1038.87V357.555C1038.87 376.695 1043.55 391.734 1053.32 402.672C1063.09 413.805 1076.95 419.273 1095.12 419.273C1110.74 419.273 1123.44 417.711 1133.2 414.391V370.836L1129.88 371.422C1127.54 371.812 1124.41 372.008 1120.51 372.398C1116.6 372.789 1112.7 372.789 1109.18 372.789C1094.92 372.789 1087.89 364.391 1087.89 347.203V271.227H1138.48V223.961H1087.89V159.508H1038.87V223.961H1008.79V271.227Z"
@@ -30,12 +29,7 @@
                             fill="#E4FF67" />
                     </svg>
                 </div>
-                <p class="animate-down w-100 d-flex flex-column align-items-center">
-                    <span class="down mt-5 mt-lg-0"></span>
-                    <span class="mt-5">Scroll down</span>
-                </p>
             </section>
-        </div>
         <div class="sub-about d-flex flex-column">
             <section class="w-100 vh-100 d-flex justify-content-center align-items-center about-1" data-element="about">
                 <div class="container-fluid">
@@ -81,22 +75,31 @@
                     </div>
             </section>
         </div>
-        <div id="panels2" class="row row-cols-1 row-cols-lg-2">
-            <section class="about-4" data-element="about">
+            <section class="about-4 d-flex justify-content-center align-items-center" data-element="about">
                 <div class="container-fluid d-flex justify-content-center align-items-center">
                     <div class="row justify-content-center row-cols-1 row-cols-md-2 service">
-                        <div class="service-content ">
+                        <div class="service-content " >
                             <div class="d-flex align-items-start">
                                 <div class="icon left-service cursor-big">
+                                    <i class="fa-solid fa-code text-unfold fs-1"></i>
+                                </div>
+                                <div class="d-flex flex-column right-service">
+                                    <h1 class="fs-1 cursor-big">Website Development</h1>
+                                    <div class="body cursor-big w-100" align="justify">
+                                        We offer a full suite of website development and programming services, E-Commerce Development, Custom Web Development, and CMS Web Development...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content" >
+                            <div class="d-flex align-items-start">
+                                <div class="icon cursor-big left-service">
                                     <i class="fa-solid fa-pen-ruler text-unfold  fs-1"></i>
                                 </div>
                                 <div class="d-flex flex-column right-service">
-                                    <h1 class="fs-1 cursor-big">Web & Mobile UI</h1>
-                                    <div class="body cursor-big w-100">
-                                        n many cases, the only thing standing between you and your users is a screen. With a
-                                        track record featuring hundreds of successful projects, we ensure that our
-                                        high-quality
-                                        interfaces play a key role in putting your initiatives on the road to success.
+                                    <h1 class="fs-1 cursor-big">Design</h1>
+                                    <div class="body cursor-big w-100" align="justify">
+                                        Design / UX-UI / Branding We offer a full suite of Design, UX-UI and Branding solutions
                                     </div>
                                 </div>
                             </div>
@@ -104,14 +107,12 @@
                         <div class="service-content">
                             <div class="d-flex align-items-start">
                                 <div class="icon cursor-big left-service">
-                                    <i class="fa-solid fa-pen-ruler text-unfold  fs-1"></i>
+                                    <i class="fa-solid fa-mobile text-unfold  fs-1"></i>
                                 </div>
                                 <div class="d-flex flex-column right-service">
-                                    <h1 class="fs-1 cursor-big">Design System</h1>
-                                    <div class="body cursor-big w-100">
-                                        We craft interfaces that can be used in every application.
-                                        Our designs are available to all the stakeholders in your
-                                        ecosystem in a bid to ramp up speed and efficiency.
+                                    <h1 class="fs-1 cursor-big">Mobile App Development</h1>
+                                    <div class="body cursor-big w-100" align="justify">
+                                        We offer a full suite of mobile Apps development and programming services, Android Apps Development, and IOS Apps Development...
                                     </div>
                                 </div>
                             </div>
@@ -119,30 +120,12 @@
                         <div class="service-content">
                             <div class="d-flex align-items-start">
                                 <div class="icon cursor-big left-service">
-                                    <i class="fa-solid fa-pen-ruler text-unfold  fs-1"></i>
+                                    <i class="fa-solid fa-desktop text-unfold  fs-1"></i>
                                 </div>
                                 <div class="d-flex flex-column right-service">
-                                    <h1 class="fs-1 cursor-big">Web & Mobile UI</h1>
-                                    <div class="body cursor-big w-100">
-                                        n many cases, the only thing standing between you and your users is a screen. With a
-                                        track record featuring hundreds of successful projects, we ensure that our
-                                        high-quality
-                                        interfaces play a key role in putting your initiatives on the road to success.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-content">
-                            <div class="d-flex align-items-start">
-                                <div class="icon cursor-big left-service">
-                                    <i class="fa-solid fa-pen-ruler text-unfold  fs-1"></i>
-                                </div>
-                                <div class="d-flex flex-column right-service">
-                                    <h1 class="fs-1 cursor-big">Design System</h1>
-                                    <div class="body cursor-big w-100">
-                                        We craft interfaces that can be used in every application.
-                                        Our designs are available to all the stakeholders in your
-                                        ecosystem in a bid to ramp up speed and efficiency.
+                                    <h1 class="fs-1 cursor-big">Desktop Apps Development</h1>
+                                    <div class="body cursor-big w-100" align="justify">
+                                        We offer a full suite of Desktop Apps development and programming services..
                                     </div>
                                 </div>
                             </div>
@@ -150,9 +133,9 @@
                     </div>
                 </div>
             </section>
-            <section class="title-page vh-100 d-flex justify-content-center justify-content-lg-around flex-column align-items-center" id="projects"
+            <section class="title-page vh-100" id="projects"
                 data-element="projects">
-                <div class="container-fluid">
+                <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
                     <svg viewBox="0 0 1524 623" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M30.4297 393H80.1562V299.113H129.883C146.025 299.113 160.312 296.701 172.93 291.691C185.547 286.867 195.566 280.002 203.359 271.281C210.967 262.561 216.719 252.541 220.615 241.408C224.512 230.275 226.553 218.215 226.553 205.227C226.553 192.238 224.512 180.363 220.615 169.23C216.719 158.098 210.967 148.264 203.359 139.543C195.566 131.008 185.547 124.143 172.93 119.133C160.312 114.309 146.025 111.711 129.883 111.711H30.4297V393ZM80.1562 251.242V159.768H129.883C145.469 159.768 157.344 164.035 165.137 172.57C172.93 181.105 177.012 192.238 177.012 205.598C177.012 218.957 172.93 229.904 165.137 238.439C157.344 246.975 145.469 251.242 129.883 251.242H80.1562ZM262.734 393H309.492V301.711C309.492 295.031 309.863 289.465 310.977 284.826C311.904 280.188 313.76 275.734 316.729 271.467C319.512 267.385 323.408 264.045 328.604 261.633C333.613 259.221 340.293 257.365 348.643 255.881C356.992 254.582 367.012 253.84 378.887 253.84V209.123C361.074 209.123 347.344 210.422 337.324 212.648C327.305 215.061 318.027 219.514 309.492 225.822V212.463H262.734V393ZM395.957 303.381C395.957 320.451 400.039 336.408 408.574 350.881C417.109 365.354 428.613 376.857 443.457 385.393C458.115 393.928 474.258 398.01 491.699 398.01C509.141 398.01 525.283 393.928 540.127 385.393C554.971 376.857 566.475 365.354 575.01 350.881C583.545 336.408 587.812 320.451 587.812 303.381C587.812 286.311 583.545 270.354 575.01 255.881C566.475 241.408 554.971 230.09 540.127 221.74C525.283 213.391 509.141 209.123 491.699 209.123C464.98 209.123 442.344 218.4 423.789 236.584C405.234 254.953 395.957 277.219 395.957 303.381ZM441.787 303.381C441.787 290.021 446.611 278.518 456.445 268.684C466.279 258.85 477.969 253.84 491.699 253.84C505.43 253.84 517.305 258.85 527.139 268.684C536.787 278.518 541.797 290.021 541.797 303.381C541.797 316.926 536.787 328.615 527.139 338.449C517.305 348.283 505.43 353.107 491.699 353.107C477.969 353.107 466.279 348.283 456.445 338.449C446.611 328.615 441.787 316.926 441.787 303.381ZM623.994 152.902C623.994 161.252 626.777 168.303 632.529 173.869C638.096 179.621 645.146 182.404 653.682 182.404C661.846 182.404 668.896 179.621 674.463 174.055C680.029 168.488 682.812 161.438 682.812 152.902C682.812 144.553 680.029 137.502 674.463 131.936C668.896 126.369 661.846 123.586 653.682 123.586C645.146 123.586 638.096 126.555 632.529 132.121C626.777 137.688 623.994 144.738 623.994 152.902ZM630.117 489.113H676.875V212.463H630.117V489.113ZM719.18 304.494C719.18 321.936 723.262 337.707 731.797 351.994C740.146 366.467 751.65 377.6 766.494 385.764C781.152 393.928 797.48 398.01 815.293 398.01C830.693 398.01 845.166 394.855 858.711 388.176C872.07 381.682 883.018 372.59 891.182 361.086L859.268 335.666C854.072 342.346 847.578 347.355 839.785 350.695C831.807 354.035 823.457 355.705 814.922 355.705C801.748 355.705 790.801 352.365 781.895 345.5C772.988 338.82 767.236 329.729 764.639 318.225H902.314C903.057 313.771 903.428 308.762 903.428 303.381C903.428 286.496 899.531 270.91 891.924 256.623C884.131 242.336 873.369 230.832 859.453 222.111C845.352 213.576 829.766 209.123 812.51 209.123C798.408 209.123 785.605 211.721 773.73 216.916C761.855 222.111 752.021 228.977 744.229 237.697C736.25 246.418 730.127 256.623 725.674 268.127C721.221 279.631 719.18 291.877 719.18 304.494ZM766.309 283.898C769.648 274.25 775.586 266.457 783.75 260.52C791.914 254.582 801.377 251.613 812.139 251.613C823.271 251.613 833.105 254.768 841.641 260.891C849.99 267.199 854.814 274.807 856.299 283.898H766.309ZM933.672 303.381C933.672 320.451 937.754 336.408 946.289 350.881C954.824 365.354 966.328 376.857 981.172 385.393C995.83 393.928 1011.97 398.01 1029.41 398.01C1046.3 398.01 1062.07 394.113 1076.54 385.949C1091.02 377.785 1102.52 367.023 1111.05 353.479L1071.53 329.914C1067.08 337.15 1061.14 342.902 1053.72 346.984C1046.3 351.066 1038.13 353.107 1029.41 353.107C1015.68 353.107 1003.99 348.283 994.16 338.449C984.326 328.615 979.502 316.926 979.502 303.381C979.502 290.021 984.326 278.518 994.16 268.684C1003.99 258.85 1015.68 253.84 1029.41 253.84C1037.76 253.84 1045.56 255.881 1052.79 259.592C1059.84 263.488 1065.78 268.684 1070.42 275.178L1110.31 251.984C1101.59 238.996 1090.09 228.605 1075.99 220.812C1061.7 213.02 1046.11 209.123 1029.41 209.123C1002.7 209.123 980.059 218.4 961.504 236.584C942.949 254.953 933.672 277.219 933.672 303.381ZM1128.31 257.365H1156.88V339.377C1156.88 357.561 1161.34 371.848 1170.62 382.238C1179.89 392.814 1193.07 398.01 1210.32 398.01C1225.17 398.01 1237.23 396.525 1246.5 393.371V351.994L1243.35 352.551C1241.12 352.922 1238.15 353.107 1234.44 353.479C1230.73 353.85 1227.02 353.85 1223.68 353.85C1210.14 353.85 1203.46 345.871 1203.46 329.543V257.365H1251.51V212.463H1203.46V151.232H1156.88V212.463H1128.31V257.365ZM1280.46 372.404C1290.48 380.197 1301.05 386.506 1312.37 391.145C1323.51 395.783 1336.68 398.01 1351.89 398.01C1373.97 398.01 1391.04 392.814 1403.29 382.053C1415.35 371.477 1421.47 357.561 1421.47 340.49C1421.47 331.955 1419.8 324.162 1416.46 317.482C1413.12 310.803 1408.67 305.422 1403.48 301.525C1398.1 297.629 1392.16 294.289 1385.85 291.32C1379.54 288.352 1373.05 285.939 1366.74 284.084C1360.24 282.229 1354.31 280.373 1349.11 278.518C1343.73 276.662 1339.46 274.621 1336.12 272.023C1332.78 269.426 1331.11 266.457 1331.11 263.117C1331.11 260.148 1332.41 257.365 1335.2 255.139C1337.79 252.912 1342.62 251.613 1349.67 251.613C1363.4 251.613 1376.94 256.252 1390.3 265.344L1414.98 231.945C1405.7 223.596 1395.13 217.658 1383.07 214.318C1371.01 210.979 1359.69 209.123 1349.3 209.123C1329.63 209.123 1314.04 214.504 1302.54 225.266C1291.04 236.027 1285.47 249.943 1285.47 266.828C1285.47 275.734 1287.14 283.342 1290.48 290.021C1293.82 296.701 1298.09 301.896 1303.47 305.607C1308.85 309.318 1314.79 312.658 1321.46 315.256C1327.96 317.854 1334.45 320.08 1340.95 321.75C1347.44 323.605 1353.38 325.275 1358.76 326.76C1364.14 328.43 1368.59 330.471 1371.93 333.068C1375.27 335.666 1376.94 338.635 1376.94 342.16C1376.94 345.871 1375.09 349.025 1371.75 351.623C1368.22 354.221 1362.66 355.334 1355.05 355.334C1347.26 355.334 1338.72 354.035 1329.81 351.066C1320.91 348.098 1312.56 343.459 1305.14 336.779L1280.46 372.404Z"
@@ -168,38 +151,33 @@
                             fill="#E4FF67" />
                     </svg>
                 </div>
-                <p class="animate-down w-100 d-flex flex-column align-items-center">
-                    <span class="down mt-5 mt-lg-0"></span>
-                    <span class="mt-5">Scroll down</span>
-                </p>
             </section>
-        </div>
         <section class="sub-project" data-element="projects">
             <div class="header_project pro_h  container-fluid d-flex">
                 <p class="fs-2 fw-bold mr-unfold cursor-big">Show:</p>
                 <ul class="navbar-nav d-flex flex-row">
                     <li class="nav-item">
                         <a class="nav-link fs-4 white-gree1 mr-unfold cursor-big active" data-categorie="All">All <span
-                                data-number="26"></span></a>
+                                data-number="3"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 white-gree1 mr-unfold cursor-big" data-categorie="Web/Mobile Ui">Web/Mobile Ui<span
-                                data-number="3"></a>
+                                data-number="0"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 white-gree1 mr-unfold cursor-big" data-categorie="Web App">Web App <span
-                                data-number="5"></a>
+                                data-number="1"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 white-gree1 mr-unfold cursor-big" data-categorie="Desktop">Desktop<span
-                                data-number="7"></a>
+                                data-number="2"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 white-gree1 mr-unfold cursor-big" data-categorie="Mobile">Mobile<span
-                                data-number="4"></a>
+                                data-number="0"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-4 white-gree1 cursor-big" data-categorie="Website">Website<span data-number="7"></a>
+                        <a class="nav-link fs-4 white-gree1 cursor-big" data-categorie="Website">Website<span data-number="0"></a>
                     </li>
                 </ul>
             </div>
@@ -224,49 +202,38 @@
             <div class="container-fluid project_animate">
                 <div class="row row-cols-1 row-cols-lg-2 min-vh-100">
                     <div class="project project-1 mb-5 px-sm-5 ps-lg-0 pe-lg-4 pe-xxl-5 show" data-type="Desktop">
-                        <div class="img cursor-big">
-                            <a href="/project/drive" class="w-100">
-                                <img src="./images/project.png">
-                                <span class="panel fs-1">Open</span>
+                        <div class="img cursor-big position-relative overflow-hidden">
+                            <a href="/project/Optic" id="open" class="w-100 h-100">
+                                <img src="./images/optic2.png">
+                                <span class="w-100 h-100 panel p-0 fs-1 text-dark d-flex justify-content-center align-items-center">Open</span>
                             </a>
                         </div>
-                        <h1 class="title-project fw-bold cursor-big mt-2">Drive</h1>
-                        <p class="white-gree2">Car rental management</p>
+                        <h1 class="title-project fw-bold cursor-big mt-2">Optic</h1>
+                        <p class="white-gree2">Optic management</p>
                     </div>
                     <div class="project project-2 mb-5 px-sm-5 pe-lg-0 ps-lg-4 ps-xxl-5 show" data-type="Desktop">
-                        <div class="img cursor-big">
-                            <a href="/project/drive" class="w-100">
-                                <img src="./images/project.png">
-                                <span class="panel fs-1">Open</span>
+                        <div class="img cursor-big position-relative overflow-hidden">
+                            <a href="/project/Point" id="open" class="w-100 h-100">
+                                <img src="./images/point2.png">
+                                <span class="panel fs-1 text-dark w-100 h-100 d-flex justify-content-center align-items-center">Open</span>
                             </a>
                         </div>
-                        <h1 class="title-project cursor-big fw-bold mt-2">Drive</h1>
-                        <p class="white-gree2">Car rental management</p>
+                        <h1 class="title-project cursor-big fw-bold mt-2">Attendance tracker</h1>
+                        <p class="white-gree2">Attendance tracker for teachers</p>
                     </div>
-                    <div class="project project-3 mb-5 px-sm-5 ps-lg-0 pe-lg-4 pe-xxl-5 show" data-type="Desktop">
-                        <div class="img cursor-big">
-                            <a href="/project/drive" class="w-100">
-                                <img src="./images/project.png">
-                                <span class="panel fs-1 ">Open</span>
+                    <div class="project project-3 mb-5 px-sm-5 ps-lg-0 pe-lg-4 pe-xxl-5 show" data-type="Web App">
+                        <div class="img cursor-big position-relative overflow-hidden">
+                            <a href="/project/SelfEducation" id="open" class="w-100 h-100">
+                                <img src="./images/se2.png">
+                                <span class="panel fs-1 text-dark w-100 h-100 d-flex justify-content-center align-items-center">Open</span>
                             </a>
                         </div>
-                        <h1 class="title-project  cursor-big fw-bold mt-2">Drive</h1>
-                        <p class="white-gree2">Car rental management</p>
-                    </div>
-                    <div class="project project-4 mb-5 px-sm-5 pe-lg-0 ps-lg-4 ps-xxl-5 show" data-type="Web App">
-                        <div class="img cursor-big">
-                            <a href="/project/drive" class="w-100">
-                                <img src="./images/project.png">
-                                <span class="panel fs-1">Open</span>
-                            </a>
-                        </div>
-                        <h1 class="title-project cursor-big fw-bold mt-2">Drive</h1>
-                        <p class="white-gree2">Car rental management</p>
+                        <h1 class="title-project  cursor-big fw-bold mt-2">Self Education</h1>
+                        <p class="white-gree2">Test langage c</p>
                     </div>
                 </div>
             </div>
         </section>
-        <div id="panels3" class="row row-cols-1 row-cols-lg-2">
             <section id="projects1" class="position-relative" data-element="projects">
                 <div class="vh-100 container-fluid d-flex justify-content-center align-items-center">
                     <svg class="contact-project cursor-big" width="524" height="301" viewBox="0 0 524 301" fill="none"
@@ -283,9 +250,9 @@
                         data-bs-toggle="modal" data-bs-target="#staticBackdrop">CONTACT US</button>
                 </div>
             </section>
-            <section class="title-page vh-100 d-flex justify-content-center justify-content-lg-around flex-column align-items-center" id="product"
+            <section class="title-page vh-100" id="product"
                 data-element="product">
-                <div class="container-fluid">
+                <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
                     <svg viewBox="0 0 1494 623" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M30.4297 393H80.1562V299.113H129.883C146.025 299.113 160.312 296.701 172.93 291.691C185.547 286.867 195.566 280.002 203.359 271.281C210.967 262.561 216.719 252.541 220.615 241.408C224.512 230.275 226.553 218.215 226.553 205.227C226.553 192.238 224.512 180.363 220.615 169.23C216.719 158.098 210.967 148.264 203.359 139.543C195.566 131.008 185.547 124.143 172.93 119.133C160.312 114.309 146.025 111.711 129.883 111.711H30.4297V393ZM80.1562 251.242V159.768H129.883C145.469 159.768 157.344 164.035 165.137 172.57C172.93 181.105 177.012 192.238 177.012 205.598C177.012 218.957 172.93 229.904 165.137 238.439C157.344 246.975 145.469 251.242 129.883 251.242H80.1562ZM262.734 393H309.492V301.711C309.492 295.031 309.863 289.465 310.977 284.826C311.904 280.188 313.76 275.734 316.729 271.467C319.512 267.385 323.408 264.045 328.604 261.633C333.613 259.221 340.293 257.365 348.643 255.881C356.992 254.582 367.012 253.84 378.887 253.84V209.123C361.074 209.123 347.344 210.422 337.324 212.648C327.305 215.061 318.027 219.514 309.492 225.822V212.463H262.734V393ZM395.957 303.381C395.957 320.451 400.039 336.408 408.574 350.881C417.109 365.354 428.613 376.857 443.457 385.393C458.115 393.928 474.258 398.01 491.699 398.01C509.141 398.01 525.283 393.928 540.127 385.393C554.971 376.857 566.475 365.354 575.01 350.881C583.545 336.408 587.812 320.451 587.812 303.381C587.812 286.311 583.545 270.354 575.01 255.881C566.475 241.408 554.971 230.09 540.127 221.74C525.283 213.391 509.141 209.123 491.699 209.123C464.98 209.123 442.344 218.4 423.789 236.584C405.234 254.953 395.957 277.219 395.957 303.381ZM441.787 303.381C441.787 290.021 446.611 278.518 456.445 268.684C466.279 258.85 477.969 253.84 491.699 253.84C505.43 253.84 517.305 258.85 527.139 268.684C536.787 278.518 541.797 290.021 541.797 303.381C541.797 316.926 536.787 328.615 527.139 338.449C517.305 348.283 505.43 353.107 491.699 353.107C477.969 353.107 466.279 348.283 456.445 338.449C446.611 328.615 441.787 316.926 441.787 303.381ZM618.242 303.381C618.242 320.451 622.324 336.408 630.859 350.881C639.395 365.354 650.898 376.857 665.742 385.393C680.4 393.928 696.543 398.01 713.984 398.01C733.652 398.01 750.352 392.443 764.082 381.311V393H810.84V111.711H764.082V225.822C749.98 214.689 733.281 209.123 713.984 209.123C687.266 209.123 664.629 218.4 646.074 236.584C627.52 254.953 618.242 277.219 618.242 303.381ZM664.072 303.381C664.072 290.021 668.896 278.518 678.73 268.684C688.564 258.85 700.254 253.84 713.984 253.84C727.715 253.84 739.59 258.85 749.424 268.684C759.072 278.518 764.082 290.021 764.082 303.381C764.082 316.926 759.072 328.615 749.424 338.449C739.59 348.283 727.715 353.107 713.984 353.107C700.254 353.107 688.564 348.283 678.73 338.449C668.896 328.615 664.072 316.926 664.072 303.381ZM864.092 318.596C864.092 345.871 871.514 365.91 886.357 378.713C901.201 391.701 922.168 398.01 948.887 398.01C975.605 398.01 996.387 391.701 1011.23 378.713C1026.07 365.91 1033.68 345.871 1033.68 318.596V212.463H986.924V305.979C986.924 322.678 984.326 334.553 979.131 341.975C973.936 349.396 963.916 353.107 948.887 353.107C933.672 353.107 923.652 349.396 918.457 341.975C913.262 334.553 910.85 322.678 910.85 305.979V212.463H864.092V318.596ZM1071.72 303.381C1071.72 320.451 1075.8 336.408 1084.34 350.881C1092.87 365.354 1104.38 376.857 1119.22 385.393C1133.88 393.928 1150.02 398.01 1167.46 398.01C1184.35 398.01 1200.12 394.113 1214.59 385.949C1229.06 377.785 1240.57 367.023 1249.1 353.479L1209.58 329.914C1205.13 337.15 1199.19 342.902 1191.77 346.984C1184.35 351.066 1176.18 353.107 1167.46 353.107C1153.73 353.107 1142.04 348.283 1132.21 338.449C1122.37 328.615 1117.55 316.926 1117.55 303.381C1117.55 290.021 1122.37 278.518 1132.21 268.684C1142.04 258.85 1153.73 253.84 1167.46 253.84C1175.81 253.84 1183.6 255.881 1190.84 259.592C1197.89 263.488 1203.83 268.684 1208.47 275.178L1248.36 251.984C1239.64 238.996 1228.13 228.605 1214.03 220.812C1199.75 213.02 1184.16 209.123 1167.46 209.123C1140.74 209.123 1118.11 218.4 1099.55 236.584C1081 254.953 1071.72 277.219 1071.72 303.381ZM1266.36 257.365H1294.93V339.377C1294.93 357.561 1299.38 371.848 1308.66 382.238C1317.94 392.814 1331.11 398.01 1348.37 398.01C1363.21 398.01 1375.27 396.525 1384.55 393.371V351.994L1381.4 352.551C1379.17 352.922 1376.2 353.107 1372.49 353.479C1368.78 353.85 1365.07 353.85 1361.73 353.85C1348.18 353.85 1341.5 345.871 1341.5 329.543V257.365H1389.56V212.463H1341.5V151.232H1294.93V212.463H1266.36V257.365Z"
@@ -301,12 +268,7 @@
                             fill="#E4FF67" />
                     </svg>
                 </div>
-                <p class="animate-down w-100 d-flex flex-column align-items-center">
-                    <span class="down mt-5 mt-lg-0"></span>
-                    <span class="mt-5">Scroll down</span>
-                </p>
             </section>
-        </div>
         <section class="sub-product w-100" data-element="product">
             <div class="w-100 vh-100 d-flex justify-content-center align-items-center product-1">
                 <div class="container-fluid cursor-big" style="z-index: 1049;">
@@ -318,12 +280,12 @@
                     </div>
                 </div>
             </div>
-            <div class="w-100 products">
+            <div class="w-100 products prod">
                 <div class="container-fluid">
                     <div class="d-flex flex-column flex-lg-row-reverse justify-content-center align-items-lg-center product-2 prod">
                         <div class="content ps-lg-5">
                             <div class="d-flex flex-row flex-lg-column-reverse justify-content-between align-items-center align-items-lg-start">
-                                <div class="product-title cursor-big">Drive</div>
+                                <div class="product-title cursor-big">SafeChat</div>
                                 <div class="product-type">
                                     <div class="position-relative">
                                         <p class="position-absolute cursor-big start-50 top-50 translate-middle"
@@ -332,8 +294,7 @@
                                 </div>
                             </div>
                             <div class="body mb-3 cursor-big white-gree2">
-                                In a culture where men turn to barbers to achieve the smoothest shave, or to a
-                                hairstylist for styling instead of just a cut, it was clear.
+                                This application through which you can send and receive messages and all types of attachments in a secure manner
                             </div>
                             <div class="line mb-3">
                                 <svg viewBox="0 0 416 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -344,59 +305,59 @@
                             <div class="d-flex justify-content-between">
                                 <div class="role cursor-big">
                                     <p class="">Role</p>
-                                    <p class="white-gree2">Car rental</p>
-                                    <p class="white-gree2">management</p>
+                                    <p class="white-gree2">SafeChat</p>
+                                    <p class="white-gree2">Chat application for work</p>
                                 </div>
                                 <button class="btn-outline-unfold cursor-big rounded-pill text-white" id="lunch_demo"
-                                    data-product="Drive">LUNCH DEMO</button>
+                                    data-product="SafeChat">LUNCH DEMO</button>
                             </div>
                         </div>
                         <div class="img-project cursor-big">
-                            <img src="./images/product.png" class="w-100" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-lg-row-reverse justify-content-center align-items-lg-center product-3 prod">
-                        <div class="content ps-lg-5">
-                            <div
-                                class="d-flex flex-row flex-lg-column-reverse justify-content-between align-items-center align-items-lg-start">
-                                <div class="product-title cursor-big">Drive</div>
-                                <div class="product-type">
-                                    <div class="position-relative">
-                                        <p class="position-absolute cursor-big start-50 top-50 translate-middle"
-                                            style="width: max-content">Desktop app</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="body cursor-big mb-3 white-gree2">
-                                In a culture where men turn to barbers to achieve the smoothest shave, or to a
-                                hairstylist for styling instead of just a cut, it was clear.
-                            </div>
-                            <div class="line mb-3">
-                                <svg viewBox="0 0 416 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 2L75 12.5L186 2L282 12.5L341.5 2H415.043" stroke="#E4FF67"
-                                        stroke-opacity="0.29" stroke-width="2" />
-                                </svg>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <div class="role cursor-big">
-                                    <p>Role</p>
-                                    <p class="white-gree2">Car rental</p>
-                                    <p class="white-gree2">management</p>
-                                </div>
-                                <button class="btn-outline-unfold cursor-big rounded-pill text-white" id="lunch_demo"
-                                    data-product="Drive">LUNCH DEMO</button>
-                            </div>
-                        </div>
-                        <div class="img-project cursor-big">
-                            <img src="./images/product.png" class="w-100" alt="" srcset="">
+                            <img src="./images/safe3.png" class="w-100" alt="" srcset="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div id="panels4" class="d-flex flex-column flex-lg-row">
             <section class="products prod" data-element="product">
-                <div class="container-fluid vh-100 d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center product-4">
+                <div class="container-fluid d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center product-4">
+                    <div class="content ps-lg-5">
+                        <div
+                            class="d-flex flex-row flex-lg-column-reverse justify-content-between align-items-center align-items-lg-start">
+                            <div class="product-title cursor-big">Optic</div>
+                            <div class="product-type">
+                                <div class="position-relative">
+                                    <p class="position-absolute cursor-big start-50 top-50 translate-middle"
+                                        style="width: max-content">Desktop app</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body cursor-big mb-3 white-gree2">
+                            In a culture where men turn to barbers to achieve the smoothest shave, or to a hairstylist for styling instead of just a cut, it was clear to sought-after men’s grooming expert, Vaughn Acord, that it was time to create a range of men’s products tailored to their needs.
+                        </div>
+                        <div class="line mb-3">
+                            <svg viewBox="0 0 416 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 2L75 12.5L186 2L282 12.5L341.5 2H415.043" stroke="#E4FF67"
+                                    stroke-opacity="0.29" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="role cursor-big">
+                                <p>Role</p>
+                                <p class="white-gree2">Optic</p>
+                                <p class="white-gree2">Optic management</p>
+                            </div>
+                            <button class="btn-outline-unfold cursor-big rounded-pill text-white" id="lunch_demo"
+                                data-product="Optic">LUNCH DEMO</button>
+                        </div>
+                    </div>
+                    <div class="img-project cursor-big">
+                        <img src="./images/optic2.png" class="w-100" alt="" srcset="">
+                    </div>
+                </div>
+            </section>
+            <section class="products prod" data-element="product">
+                <div class="container-fluid d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center product-4">
                     <div class="content ps-lg-5">
                         <div
                             class="d-flex flex-row flex-lg-column-reverse justify-content-between align-items-center align-items-lg-start">
@@ -409,8 +370,7 @@
                             </div>
                         </div>
                         <div class="body cursor-big mb-3 white-gree2">
-                            In a culture where men turn to barbers to achieve the smoothest shave, or to a hairstylist
-                            for styling instead of just a cut, it was clear.
+                            The Drive app is used to register customers and cars with all their information to help the agency run and convert everything digital.
                         </div>
                         <div class="line mb-3">
                             <svg viewBox="0 0 416 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -421,21 +381,21 @@
                         <div class="d-flex justify-content-between">
                             <div class="role cursor-big">
                                 <p>Role</p>
-                                <p class="white-gree2">Car rental</p>
-                                <p class="white-gree2">management</p>
+                                <p class="white-gree2">Drive</p>
+                                <p class="white-gree2">Car rental management</p>
                             </div>
                             <button class="btn-outline-unfold cursor-big rounded-pill text-white" id="lunch_demo"
                                 data-product="Drive">LUNCH DEMO</button>
                         </div>
                     </div>
                     <div class="img-project cursor-big">
-                        <img src="./images/product.png" class="w-100" alt="" srcset="">
+                        <img src="./images/drive1.bmp" class="w-100" alt="" srcset="">
                     </div>
                 </div>
             </section>
-            <section class="title-page vh-100 d-flex flex-column justify-content-center justify-content-lg-around align-items-center" id="team"
+            <section class="title-page vh-100" id="team"
                 data-element="team">
-                <div class="container-fluid">
+                <div class="container-fluid h-100 d-flex flex-column justify-content-center align-items-center">
                     <svg viewBox="0 0 1149 650" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M9.96094 168.492H105.273V414H157.617V168.492H252.344V117.906H9.96094V168.492ZM252.344 320.836C252.344 339.195 256.641 355.797 265.625 370.836C274.414 386.07 286.523 397.789 302.148 406.383C317.578 414.977 334.766 419.273 353.516 419.273C369.727 419.273 384.961 415.953 399.219 408.922C413.281 402.086 424.805 392.516 433.398 380.406L399.805 353.648C394.336 360.68 387.5 365.953 379.297 369.469C370.898 372.984 362.109 374.742 353.125 374.742C339.258 374.742 327.734 371.227 318.359 364C308.984 356.969 302.93 347.398 300.195 335.289H445.117C445.898 330.602 446.289 325.328 446.289 319.664C446.289 301.891 442.188 285.484 434.18 270.445C425.977 255.406 414.648 243.297 400 234.117C385.156 225.133 368.75 220.445 350.586 220.445C335.742 220.445 322.266 223.18 309.766 228.648C297.266 234.117 286.914 241.344 278.711 250.523C270.312 259.703 263.867 270.445 259.18 282.555C254.492 294.664 252.344 307.555 252.344 320.836ZM301.953 299.156C305.469 289 311.719 280.797 320.312 274.547C328.906 268.297 338.867 265.172 350.195 265.172C361.914 265.172 372.266 268.492 381.25 274.938C390.039 281.578 395.117 289.586 396.68 299.156H301.953ZM478.125 319.664C478.125 337.633 482.422 354.43 491.406 369.664C500.391 384.898 512.5 397.008 528.125 405.992C543.555 414.977 560.547 419.273 578.906 419.273C599.609 419.273 617.188 413.414 631.641 401.695V414H680.859V223.961H631.641V238.023C616.797 226.305 599.219 220.445 578.906 220.445C550.781 220.445 526.953 230.211 507.422 249.352C487.891 268.688 478.125 292.125 478.125 319.664ZM526.367 319.664C526.367 305.602 531.445 293.492 541.797 283.141C552.148 272.789 564.453 267.516 578.906 267.516C593.359 267.516 605.859 272.789 616.211 283.141C626.367 293.492 631.641 305.602 631.641 319.664C631.641 333.922 626.367 346.227 616.211 356.578C605.859 366.93 593.359 372.008 578.906 372.008C564.453 372.008 552.148 366.93 541.797 356.578C531.445 346.227 526.367 333.922 526.367 319.664ZM741.016 414H790.234V311.656C790.234 282.359 803.32 267.516 829.688 267.516C834.57 267.516 838.867 268.102 842.578 269.273C846.289 270.445 850 272.398 853.516 275.328C857.031 278.453 859.57 282.945 861.523 289.195C863.477 295.445 864.453 303.258 864.453 312.438V414H913.672V311.656C913.672 282.359 926.758 267.516 953.32 267.516C958.203 267.516 962.5 268.102 966.211 269.273C969.922 270.445 973.633 272.398 977.148 275.328C980.664 278.453 983.203 282.945 985.156 289.195C987.109 295.445 988.086 303.258 988.086 312.438V414H1037.3V304.43C1037.3 276.109 1030.47 255.016 1016.8 241.148C1003.12 227.477 985.156 220.445 962.891 220.445C951.367 220.445 940.039 222.789 928.711 227.086C917.383 231.578 907.617 238.805 899.414 248.766C886.523 230.016 866.406 220.445 839.258 220.445C831.445 220.445 824.219 221.422 817.578 223.375C810.938 225.328 806.055 227.281 802.93 229.234C799.805 231.188 795.508 234.117 790.234 238.023V223.961H741.016V414Z"
@@ -451,12 +411,7 @@
                             fill="#E4FF67" />
                     </svg>
                 </div>
-                <p class="animate-down w-100 d-flex flex-column align-items-center">
-                    <span class="down mt-5 mt-lg-0"></span>
-                    <span class="mt-4">Scroll down</span>
-                </p>
             </section>
-        </div>
         <section class="sub-team" data-element="team">
             <div class="w-100 vh-100 d-flex justify-content-center align-items-center team-2">
                 <div class="container-fluid">
@@ -476,30 +431,30 @@
                     </div>
                 </div>
             </div>
-            <div class="team-3 w-100 d-flex justify-content-center">
+            <div class="team-3 w-100 d-flex justify-content-center align-items-center">
                 <div class="container-fluid h-100 row row-cols-1 row-cols-lg-2 team">
-                    <div class="dev d-flex flex-column align-items-center mb-4">
-                        <div class="clip_team cursor-big position-relative mb-4 mb-lg-5">
+                    <div class="dev d-flex flex-column align-items-center mb-4 mb-lg-5">
+                        <div class="clip_team cursor-big position-relative mb-4">
                             <div class="position-absolute start-50 top-50 translate-middle"></div>
                         </div>
                         <h2 class="fs-2 cursor-big">DAGHOUJ Mohamed Reda</h2>
                         <h4 class="fs-4 cursor-big white-gree2">Java Developer</h4>
                     </div>
-                    <div class="dev d-flex flex-column align-items-center mb-4">
-                        <div class="clip_team cursor-big position-relative mb-4 mb-lg-5">
+                    <div class="dev d-flex flex-column align-items-center mb-4 mb-lg-5">
+                        <div class="clip_team cursor-big position-relative mb-4">
                             <div class="position-absolute start-50 top-50 translate-middle"></div>
                         </div>
                         <h2 class="fs-2 cursor-big">HIHI Mohamed</h2>
                         <h4 class="fs-4 cursor-big white-gree2">.Net Developer</h4>
                     </div>
-                    <div class="dev d-flex flex-column align-items-center mb-4 mb-lg-5">
+                    <div class="dev d-flex flex-column align-items-center mb-4">
                         <div class="clip_team cursor-big position-relative mb-4">
                             <div class="position-absolute start-50 top-50 translate-middle"></div>
                         </div>
                         <h2 class="fs-2 cursor-big">TAAOUATI Oussama</h2>
                         <h4 class="fs-4 cursor-big white-gree2">.Net Developer</h4>
                     </div>
-                    <div class="dev d-flex flex-column align-items-center mb-4 mb-lg-5">
+                    <div class="dev d-flex flex-column align-items-center mb-5 mb-lg-4">
                         <div class="clip_team cursor-big position-relative mb-4">
                             <div class="position-absolute start-50 top-50 translate-middle"></div>
                         </div>

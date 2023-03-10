@@ -22,10 +22,10 @@
                             <button type="button"
                                 class="btn-close cursor-big fw-bold d-flex justify-content-end align-items-center"
                                 data-bs-dismiss="modal" aria-label="Close">
-                                <span class="fs-1"><i class="fa-solid fa-xmark"></i></span>
+                                <span class="fs-2"><i class="fa-solid fa-xmark"></i></span>
                             </button>
                         </div>
-                        <p class="mt-5"><span class="cursor-big white-gree">Project type</span></p>
+                        <p class="mt-5 mt-lg-3"><span class="cursor-big white-gree">Project type</span></p>
                         <div class="row row-cols-3 row-cols-sm-5 nav_project_type">
                                 <span class="mb-2 me-u5 cursor-big">Website</span>
                                 <span class="mb-2 me-u5 cursor-big">WebApp</span>
@@ -33,20 +33,20 @@
                                 <span class="mb-2 me-u5 cursor-big">Desktop app</span>
                                 <span class="mb-2 me-u5 cursor-big">Other</span>
                         </div>
-                        <p class="mt-5"><span class="cursor-big white-gree">Interested in...</span></p>
+                        <p class="mt-5 mt-lg-3"><span class="cursor-big white-gree">Interested in...</span></p>
                         <div class="row row-cols-3 nav_interested">
                                 <span class="me-u5 mb-2 cursor-big">Development</span>
                                 <span class="me-u5 mb-2 cursor-big">Design</span>
                                 <span class="me-u5 cursor-big">Dev & Design</span>
                         </div>
-                        <div class="row row-cols-1 px-3 row-cols-lg-2 mt-5 form">
-                            <div class="d-flex flex-column ps-lg-0 pe-lg-5">
+                        <div class="row row-cols-1 px-3 row-cols-lg-2 mt-5 mt-lg-3 form">
+                            <div class="d-flex flex-column ps-lg-0 pe-lg-5 fr">
                                 <p><span class="cursor-big white-gree">Name</span></p>
                                 <input type="text" name="name" id="name" class="w-100 mb-5 px-2" autocomplete="off" >
                                 <p><span class="cursor-big white-gree">Email</span></p>
-                                <input type="email" name="email" id="email" class="w-100 px-2 mb-5" autocomplete="off">
+                                <input type="email" name="email" id="email" class="w-100 px-2 mb-5 mb-lg-3" autocomplete="off">
                             </div>
-                            <div class="d-flex flex-column pe-lg-0 ps-lg-5">
+                            <div class="d-flex flex-column pe-lg-0 ps-lg-5 fr">
                                 <p><span class="cursor-big white-gree">Additional details (optional)</span></p>
                                 <textarea name="Additional_details" id="Additional_details" maxlength="250" autocomplete="off" class="mb-4 px-2"></textarea>
                                 <div class="d-flex justify-content-start justify-content-lg-end align-items-center">
@@ -56,14 +56,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-100 d-flex flex-column justify-content-center align-items-center mt-4 mt-md-2 mb-4">
+                        <div class="w-100 d-flex flex-column justify-content-center align-items-center mt-4 mt-md-2 mb-4 mb-lg-0 mb-xxl-4">
                             <p><span class="cursor-big white-gree">SOCIAL</span></p>
                             <div class="social d-flex justify-content-center align-itmes-center">
-                                <a href="#" class="me-4 fs-4 cursor-big"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" class="me-4 fs-4 cursor-big"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#" class="me-4 fs-4 cursor-big"><i class="fa-brands fa-behance"></i></a>
-                                <a href="#" class="me-4 fs-4 cursor-big"><i class="fa-brands fa-dribbble"></i></a>
-                                <a href="#" class="fs-4 cursor-big"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="me-4 fs-5 cursor-big"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="me-4 fs-5 cursor-big"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" class="me-4 fs-5 cursor-big"><i class="fa-brands fa-behance"></i></a>
+                                <a href="#" class="me-4 fs-5 cursor-big"><i class="fa-brands fa-dribbble"></i></a>
+                                <a href="#" class="fs-5 cursor-big"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>

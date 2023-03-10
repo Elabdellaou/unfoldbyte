@@ -4,6 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import CSSRulePlugin from 'gsap/CSSRulePlugin';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import TweenMax from 'gsap/gsap-core';
+import ScrollReveal from 'scrollreveal';
 import axios from 'axios';
 
 axios.defaults.headers.common = {
@@ -14,18 +15,29 @@ gsap.registerPlugin(ScrollTrigger,CSSRulePlugin,ScrollToPlugin)
 let container_load = document.querySelector('nav .container-fluid')
 let cursors_big = document.querySelectorAll('.cursor-big')
 let cursor=document.querySelector("#cursor")
-var logo_after = CSSRulePlugin.getRule("#loading .logo::after");
-var logo_before = CSSRulePlugin.getRule("#loading .logo::before");
 let nav_load = document.querySelector('#nav-load')
+$("#scrollTop").on("click",()=>{
+    if (document.documentElement.offsetWidth < 1200){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 100);
+    }
+})
     //hide nav
     window.addEventListener('scroll', () => {
-        if (document.documentElement.scrollTop <= 0 && document.documentElement.scrollLeft <= 0) {
+        if (document.documentElement.scrollTop <= 0) {
             if (document.documentElement.offsetWidth >= 992)
                 TweenMax.to(nav_load, { y: "0%", opacity: 1, duration: 1, delay: 0.4})
         } else {
             if (document.documentElement.offsetWidth >= 992)
-                TweenMax.to(nav_load, { y: "-200%", opacity: 0, duration: 1, delay: 0.4})
-
+                TweenMax.to(nav_load, { y: "-200%", opacity: 0, duration: 1, delay: 0})
+        }
+        if (document.documentElement.scrollTop <= 100) {
+            if (document.documentElement.offsetWidth < 1200)
+                $("#scrollTop").addClass("d-none")
+        } else {
+            if (document.documentElement.offsetWidth < 1200)
+                $("#scrollTop").removeClass("d-none")
         }
     })
 cursors_big.forEach(element => {
@@ -36,36 +48,78 @@ cursors_big.forEach(element => {
         cursor.classList.remove("active")
     })
 });
+//load global animate
+window.addEventListener('load', () => {
 setTimeout(() => {
     window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth'
     });
+    if(localStorage.getItem("position")!=""&&document.querySelector(localStorage.getItem("position"))!=null){
+        TweenMax.to('nav', { duration: 0.3, delay: 0,opacity:1, y: "-100%" });
+        TweenMax.to('main', { duration: 0.3, delay: 0, opacity: 1 });
+        TweenMax.to('#loading', { duration: 0.7, delay: 0, opacity: 0 });
+        TweenMax.to('#loading', { duration: 0, delay: 0.2, display: "none" });
+        TweenMax.to('body', { duration: 0, delay: 0, overflowY: "scroll" });
+    }else{
+        TweenMax.to('nav', { duration: 0.3, delay: 2.3,opacity:1, y: "-100%" });
+        TweenMax.to('main', { duration: 0.3, delay: 2.3, opacity: 1 });
+        TweenMax.to('#loading', { duration: 0.7, delay: 1.6, opacity: 0 });
+        TweenMax.to('#loading', { duration: 0, delay: 2.2, display: "none" });
+        TweenMax.to('body', { duration: 0, delay: 4, overflowY: "scroll" });
+    }
 }, 500);
-//load global animate
-window.addEventListener('load', () => {
     ScrollReveal({
-        reset:true,
+        reset:false,
         distance:"100px",
         duration:1500,
         // delay:50,
         opacity:0
     })
-    TweenMax.to(logo_after, { duration: 1, opacity: 1, delay: 0.7 });
-    TweenMax.to(logo_before, { duration: 1, opacity: 1, delay: 0.7 });
-    TweenMax.to('#loading .logo', { duration: 2, delay: 1.7, opacity: 1, scale: 1.5,ease:"back"});
-    TweenMax.to('#loading', { duration: 0.7, delay: 3.6, opacity: 0 });
-    TweenMax.to('#loading', { duration: 0, delay: 4.2, display: "none" });
-    TweenMax.to('main', { duration: 0.3, delay: 4.3, opacity: 1 });
-    TweenMax.to('nav', { duration: 0.3, delay: 4.3, y: "-100%" });
-    TweenMax.to('body', { duration: 0, delay: 6, overflowY: "scroll" });
-    TweenMax.to('nav', { y: "0%", opacity: 1, duration: 0.7, delay: 4.6 })
     //home scripts
-if (document.querySelector("#home") != null) {
-    ScrollReveal().reveal(".project a",{origin:"top"})
-    ScrollReveal().reveal(".project h1",{origin:"left"})
-    ScrollReveal().reveal(".project p",{origin:"right"})
+if (document.querySelector(".home-p") != null) {
+    window.addEventListener('scroll', () => {
+        if (document.documentElement.scrollTop <= 0 && document.documentElement.offsetWidth >= 992) {
+                TweenMax.from(links[0], { y: "-100%", opacity: 0, duration: 0.7, delay: 0})
+                TweenMax.from(links[1], { y: "-100%", opacity: 0, duration: 0.7, delay: 0.3})
+                TweenMax.from(links[2], { y: "-100%", opacity: 0, duration: 0.7, delay: 0.6})
+                TweenMax.from(links[3], { y: "-100%", opacity: 0, duration: 0.7, delay: 0.9})
+                TweenMax.from(links[4], { y: "-100%", opacity: 0, duration: 0.7, delay: 1.2})
+        }
+    })
+    setTimeout(() => {
+        if(localStorage.getItem("position")!=""&&document.querySelector(localStorage.getItem("position"))!=null){
+            let top=document.querySelector(localStorage.getItem("position")).offsetTop
+            if(localStorage.getItem("position")==".sub-project")
+                top-=100
+
+            window.scrollTo({
+                top:top,
+                behavior:'smooth'
+            })
+        }else{
+            TweenMax.from('.home-p p:nth-child(1)', { x: "100%", opacity: 0, duration: 0.7, scale: 0, delay: 2.2 })
+            TweenMax.from('.home-p p:nth-child(2)', { x: "-100%", opacity: 0, duration: 0.7, scale: 0, delay: 2.7 })
+            TweenMax.from('.home-p p:nth-child(3)', { x: "100%", opacity: 0, duration: 0.7, scale: 0, delay: 3.2 })
+            TweenMax.from('nav #logo', { x: "-100%", opacity: 0, duration: 1, delay: 2.7})
+            TweenMax.from('nav #link-contact', { x: "100%", opacity: 0, duration: 1, delay: 2.7})
+        }
+    }, 1000);
+    window.addEventListener('scroll', () => {
+        localStorage.setItem("position","")
+        if (document.documentElement.scrollTop <= 100 && document.documentElement.scrollLeft <= 100) {
+            links.forEach(ele => {
+                ele.classList.remove('active')
+            })
+                links[0].classList.add('active')
+        }
+    })
+
+
+    // ScrollReveal().reveal(".project a",{origin:"top"})
+    // ScrollReveal().reveal(".project h1",{origin:"left"})
+    // ScrollReveal().reveal(".project p",{origin:"right"})
     ScrollReveal().reveal(".team .dev .clip_team",{origin:"bottom",distance:"200px",})
     ScrollReveal().reveal(".team .dev .fs-2",{origin:"right"})
     ScrollReveal().reveal(".team .dev .fs-4",{origin:"left"})
@@ -93,9 +147,13 @@ if (document.querySelector("#home") != null) {
     })
 let close_modal = document.querySelector(".btn-close")
 close_modal.addEventListener("click", () => {
+    if (document.documentElement.scrollTop <= 100&&document.documentElement.offsetWidth<1200)
+            $("#scrollTop").addClass("d-none")
+
     TweenMax.to('body', { delay: 0.5, overflowY: "scroll" });
     TweenMax.to("main", { opacity: 1, duration: 1 })
-    TweenMax.to("nav", { opacity: 1, duration: 1 })
+    if(document.documentElement.offsetWidth>=575)
+        TweenMax.to("nav", { opacity: 1, duration: 1 })
     reset_contact()
 })
 let link_contact = document.querySelector("#link-contact")
@@ -104,9 +162,12 @@ link_contact.addEventListener("click", () => {
 })
 //animation modal contact
 function animation_modal() {
+    if(document.documentElement.offsetWidth<1200 &&document.documentElement.scrollTop>=100)
+        $("#scrollTop").removeClass("d-none")
     TweenMax.from(".modal-content", { height: "0%", opacity: 0, duration: 1.5, delay: 1 })
     TweenMax.to("main", { opacity: 0, duration: 1, delay: 2.5 })
-    TweenMax.to("nav", { opacity: 0, duration: 1, delay: 2.5 })
+    if(document.documentElement.offsetWidth>=575)
+        TweenMax.to("nav", { opacity: 0, duration: 1, delay: 2.5 })
 }
 //active project type
 let nav_project_type_links = document.querySelectorAll('.nav_project_type span'),
@@ -175,7 +236,7 @@ send.addEventListener("click", () => {
             }
             reset_contact()
         }else
-            window.location.replace("/404")
+            window.location.href="/404"
 
     }).catch(errors=>{
         let error=""
@@ -214,7 +275,16 @@ send.addEventListener("click", () => {
     let lunch_demo=document.querySelectorAll("#lunch_demo")
     lunch_demo.forEach(link=>{
         link.addEventListener("click",()=>{
-            window.location.replace("/product/"+link.dataset.product.toLowerCase())
+            localStorage.setItem("position",".products")
+            window.location.href="/product/"+link.dataset.product
+        })
+    })
+    let open_project=document.querySelectorAll("#open")
+    open_project.forEach(link=>{
+        link.addEventListener("click",e=>{
+            e.preventDefault()
+            localStorage.setItem("position",".sub-project")
+            window.location.href=link.getAttribute("href")
         })
     })
     let btn_contact = document.querySelector(".btn-contact")
@@ -286,7 +356,21 @@ send.addEventListener("click", () => {
     let links = document.querySelectorAll('#nav-load .nav-item .nav-link')
     let navbar_collapse = document.querySelector('.navbar-collapse')
     let navbar_toggler = document.querySelector('.navbar-toggler')
-
+    links.forEach(element => {
+        element.classList.remove("active")
+    });
+    if(localStorage.getItem("position")!=""&&localStorage.getItem("position")==".products"){
+        links.forEach(element => {
+            if(element.dataset.nav=="product")
+                element.classList.add("active")
+        });
+    }else if(localStorage.getItem("position")!=""&&localStorage.getItem("position")==".sub-project"){
+        links.forEach(element => {
+            if(element.dataset.nav=="projects")
+                element.classList.add("active")
+        });
+    }else
+        links[0].classList.add("active")
     //active link nav product and search product categorie
     //nav project active link
     let nav_project = document.querySelectorAll('.header_project .nav-link')
@@ -301,77 +385,17 @@ send.addEventListener("click", () => {
             filter_projects(element.dataset.categorie)
         })
     })
-        //animation home
-        TweenMax.from('.home-p p:nth-child(1)', { x: "100%", opacity: 0, duration: 0.7, scale: 0, delay: 4.2 })
-        TweenMax.from('.home-p p:nth-child(2)', { x: "-100%", opacity: 0, duration: 0.7, scale: 0, delay: 4.7 })
-        TweenMax.from('.home-p p:nth-child(3)', { x: "100%", opacity: 0, duration: 0.7, scale: 0, delay: 5.2 })
         // add a media query animation
         let mm = gsap.matchMedia();
         mm.add("(min-width: 992px)", () => {
             //animation nav-link
-            TweenMax.from('nav #logo', { x: "-100%", opacity: 0, duration: 1, delay: 4.7})
-            TweenMax.from('nav #link-contact', { x: "100%", opacity: 0, duration: 1, delay: 4.7})
-            TweenMax.from(links[0], { y: "-100%", opacity: 0, duration: 0.7, delay: 5})
-            TweenMax.from(links[1], { y: "-100%", opacity: 0, duration: 0.7, delay: 5.3})
-            TweenMax.from(links[2], { y: "-100%", opacity: 0, duration: 0.7, delay: 5.6})
-            TweenMax.from(links[3], { y: "-100%", opacity: 0, duration: 0.7, delay: 5.9})
-            TweenMax.from(links[4], { y: "-100%", opacity: 0, duration: 0.7, delay: 6.2})
-            const t = gsap.timeline();
-            t.to('#panels', { x: -window.innerWidth, duration: 1 })
-            ScrollTrigger.create({
-                animation: t,
-                trigger: "#panels",
-                start:"top top",
-                end:"+="+window.innerWidth,
-                pin: true,
-                scrub: 1,
-                snap: {
-                    snapTo: 1 ,
-                    duration: {min: 0.1, max: 0.1}
-                },
-            })
-            const t2 = gsap.timeline();
-            t2.to('#panels2', { x: -window.innerWidth, duration: 1 })
-            ScrollTrigger.create({
-                animation: t2,
-                trigger: "#panels2",
-                start:"top top",
-                pin: true,
-                end:"+="+window.innerWidth,
-                scrub: 1,
-                snap: {
-                    snapTo: 1 ,
-                    duration: {min: 0.1, max: 0.1}
-                },
-            })
-            const t3 = gsap.timeline();
-            t3.to('#panels3', { x: -window.innerWidth, duration:1  })
-            ScrollTrigger.create({
-                animation: t3,
-                trigger: "#panels3",
-                start:"top top",
-                pin: true,
-                end:"+="+window.innerWidth,
-                scrub: 1,
-                snap: {
-                    snapTo: 1 ,
-                    duration: {min: 0.1, max: 0.1}
-                },
-            })
-            const t4 = gsap.timeline();
-            t4.to('#panels4', { x: -window.innerWidth, duration: 1 })
-            ScrollTrigger.create({
-                animation: t4,
-                trigger: "#panels4",
-                start:"top top",
-                pin: true,
-                end:"+="+window.innerWidth,
-                scrub: 1,
-                snap: {
-                    snapTo: 1 ,
-                    duration: {min: 0.1, max: 0.1}
-                },
-            })
+            if(localStorage.getItem("position")==""||document.querySelector(localStorage.getItem("position"))!=null){
+                TweenMax.from(links[0], { y: "-100%", opacity: 0, duration: 0.7, delay: 3.7})
+                TweenMax.from(links[1], { y: "-100%", opacity: 0, duration: 0.7, delay: 4})
+                TweenMax.from(links[2], { y: "-100%", opacity: 0, duration: 0.7, delay: 4.3})
+                TweenMax.from(links[3], { y: "-100%", opacity: 0, duration: 0.7, delay: 4.6})
+                TweenMax.from(links[4], { y: "-100%", opacity: 0, duration: 0.7, delay: 4.9})
+            }
         });
     //active nav-link onclick
     links.forEach(el => {
@@ -388,53 +412,24 @@ send.addEventListener("click", () => {
             })
             el.classList.add("active")
             e.preventDefault()
-            if (document.documentElement.offsetWidth >= 992) {
-                if (el.dataset.nav == "about"){
-                    scrollToView("#panels")
-                    setTimeout(() => {
-                        gsap.to('#panels', { x: -(window.innerWidth)})
-                    }, 2400);
-                }
-                else if (el.dataset.nav == "projects"){
-                    scrollToView("#panels2")
-                    setTimeout(() => {
-                        gsap.to('#panels2', { x: -window.innerWidth})
-                    }, 2400);
-                }
-                else if (el.dataset.nav == "product"){
-                    scrollToView("#panels3")
-                    setTimeout(() => {
-                        gsap.to('#panels3', { x: -window.innerWidth})
-                    }, 2400);
-                }
-                else if (el.dataset.nav == "team"){
-                    scrollToView("#panels4")
-                    setTimeout(() => {
-                        gsap.to('#panels4', { x: -window.innerWidth})
-                    }, 2400);
-                }
-                else
-                    scrollToView(el.getAttribute('href'))
-            } else
-                scrollToView(el.getAttribute('href'))
+            scrollToView(el.getAttribute('href'))
         })
     })
     //scroll to section
-    function scrollToView(el, d = 3.3) {
+    function scrollToView(el, d = 4) {
+        cursor.style.display="none"
         setTimeout(() => {
             navigation.classList.remove("d-none")
-            cursor.style.display="none"
             document.querySelector(el).scrollIntoView({ behavior: 'smooth' })
-        }, 1100);
-        TweenMax.to('body', { duration: 0, delay: 1, overflowY: "hidden" });
-        TweenMax.to('#navigation', { duration: 0.3, delay: 1.1, opacity: 1 });
+        }, 1000);
+        TweenMax.to('body', { duration: 0, overflowY: "hidden" });
+        TweenMax.to('#navigation', { duration: 0.3, delay: 0.7, opacity: 1 });
         gsap.to('main', { opacity: 0, delay: 1 })
-        TweenMax.to('#navigation .logo', { duration: 1, delay: 1.1, opacity: 1 });
         TweenMax.to('#navigation', { duration: 0.3, delay: (d - 0.3), opacity: 0 });
         setTimeout(() => {
             navigation.classList.add("d-none")
             cursor.style.display="block"
-        }, 2900);
+        }, 3700);
         gsap.to('main', { opacity: 1, delay: d })
         TweenMax.to('body', { duration: 0, delay: d, overflowY: "scroll" });
     }
@@ -446,15 +441,17 @@ send.addEventListener("click", () => {
     // active nav-link onscroll
     const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (document.documentElement.scrollTop >= 50 || document.documentElement.scrollLeft >= 50) {
-                    links.forEach(ele => {
-                            ele.classList.remove('active')
-                    })
+                links.forEach(ele => {
+                    ele.classList.remove('active')
+                })
+                if (document.documentElement.scrollTop >= 50) {
                     links.forEach(el => {
                         if (entry.target.dataset.element == el.dataset.nav)
-                            el.classList.add('active')
+                        el.classList.add('active')
                     })
-                }
+                }else
+                    links[0].classList.add('active')
+
             })
     })
     const contentElement = document.querySelectorAll('section')
@@ -499,7 +496,7 @@ send.addEventListener("click", () => {
         animation: p1,
         trigger: ".product-1",
         pin: true,
-        start: "center center",
+        start: "center 60%",
         end: "+=10vh",
         scrub: 4,
     })
@@ -540,12 +537,17 @@ send.addEventListener("click", () => {
     })
 }else if(document.querySelector("#project-page") != null){
 //show product scripts
-    TweenMax.from('.title', { y: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 4.2})
-    TweenMax.from('.pa-1 ', { y: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 4.9 })
-    TweenMax.from('.hr ', { opacity: 0, duration: 0.7, delay: 5.6 })
-    TweenMax.from('.pa-3 ', { x: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 6.3 })
-    TweenMax.from('.pa-2 ', { x: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 5.8 })
-    TweenMax.from('.img-1 ', { y: "300%", opacity: 0, duration: 1, scale: 0, delay: 6.8 })
+    TweenMax.to('nav', { duration: 0.3,delay:1,opacity:1, y: "-100%" });
+    TweenMax.to('main', { duration: 0.3,delay:0.7, opacity: 1 });
+    TweenMax.to('#loading', { duration: 0.7, opacity: 0 });
+    TweenMax.to('#loading', { duration: 0,delay:0.7, display: "none" });
+    TweenMax.to('body', { duration: 0, delay: 1, overflowY: "scroll" });
+    // TweenMax.from('.title', { y: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 1.2})
+    // TweenMax.from('.pa-1 ', { y: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 1.9 })
+    // TweenMax.from('.hr ', { opacity: 0, duration: 0.7, delay: 2.6 })
+    // TweenMax.from('.pa-2 ', { x: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 2.8 })
+    // TweenMax.from('.pa-3 ', { x: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 3.3 })
+    // TweenMax.from('.img-1 ', { y: "300%", opacity: 0, duration: 1, scale: 0, delay: 3.8 })
     ScrollReveal().reveal(".s1 .section-pr .p-big",{origin:"left"})
     ScrollReveal().reveal(".s1 .section-pr .p-small",{origin:"right",delay:20})
     ScrollReveal().reveal(".s1 .img-h",{origin:"bottom",delay:40})
@@ -555,14 +557,19 @@ send.addEventListener("click", () => {
     ScrollReveal().reveal(".footer span",{origin:"right",delay:60})
 }else if(document.querySelector("#product-page") != null){
 //show project scripts
-    TweenMax.from('.title', { y: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 4.2})
-    TweenMax.from('.pa-1 ', { y: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 4.8 })
-    TweenMax.from('.pa-2 ', { x: "-300%",opacity: 0, duration: 0.7, delay: 5.3 })
-    TweenMax.from('.pa-3 ', { x: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 5.8 })
-    TweenMax.from('.pa-4 ', { x: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 6.3 })
-    TweenMax.from('.pa-5 ', { x: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 6.8 })
-    TweenMax.from('.div-btn', { y: "300%", opacity: 0, duration: 1, scale: 0, delay: 7.5 })
-    TweenMax.from('.img-1', { y: "300%", opacity: 0, duration: 1, scale: 0, delay: 8})
+TweenMax.to('nav', { duration: 0.3,delay:1,opacity:1, y: "-100%" });
+TweenMax.to('main', { duration: 0.3,delay:0.7, opacity: 1 });
+TweenMax.to('#loading', { duration: 0.7, opacity: 0 });
+TweenMax.to('#loading', { duration: 0,delay:0.7, display: "none" });
+TweenMax.to('body', { duration: 0, delay: 1, overflowY: "scroll" });
+    // TweenMax.from('.title', { y: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 1.2})
+    // TweenMax.from('.pa-1 ', { y: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 1.8 })
+    // TweenMax.from('.pa-2 ', { x: "-300%",opacity: 0, duration: 0.7, delay: 2.3 })
+    // TweenMax.from('.pa-3 ', { x: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 2.8 })
+    // TweenMax.from('.pa-4 ', { x: "-300%", opacity: 0, duration: 0.7, scale: 0, delay: 3.3 })
+    // TweenMax.from('.pa-5 ', { x: "300%", opacity: 0, duration: 0.7, scale: 0, delay: 3.8 })
+    // TweenMax.from('.div-btn', { y: "300%", opacity: 0, duration: 1, scale: 0, delay: 4.5 })
+    // TweenMax.from('.img-1', { y: "300%", opacity: 0, duration: 1, scale: 0, delay: 5})
     ScrollReveal().reveal(".section-2 p .p-big",{origin:"top",delay:20})
     ScrollReveal().reveal(".section-2 p .p-small",{origin:"left"})
     ScrollReveal().reveal(".section-2>.p-small",{origin:"right",delay:40})
@@ -579,7 +586,7 @@ send.addEventListener("click", () => {
     ScrollReveal().reveal(".section-7 .p-small",{origin:"left",delay:60})
     ScrollReveal().reveal(".section-7 .p-big",{origin:"bottom",distance:"300px",delay:60,interval:20})
 }else
-    window.location.replace("/404")
+    window.location.href="/404"
     //cursor move
     setTimeout(() => {
         document.addEventListener("mousemove",e=>{

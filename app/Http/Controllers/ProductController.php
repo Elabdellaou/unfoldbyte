@@ -10,7 +10,13 @@ class ProductController extends Controller
     {
 
     }
-    public function drive(){
-        return view('product.drive');
+    public function Optic(){
+        return view('product.optic');
+    }
+    public function Safe(){
+        return view("product.safeChat");
+    }
+    public function Drive(){
+        return view("product.drive");
     }
 }

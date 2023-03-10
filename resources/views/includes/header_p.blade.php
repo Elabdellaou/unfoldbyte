@@ -1,6 +1,6 @@
 <nav class="navbar w-100 navbar-expand-lg navbar-dark position-fixed">
-    <div class="container-fluid px-2 px-md-4 px-lg-2 px-xl-4 pt-0 pt-lg-2 position-fixed start-50 top-0 translate-middle-x">
-        <a class="navbar-brand cursor-big text-white" id="logo" href="#">
+    <div class="container-fluid px-2 px-md-4 px-lg-2 px-xl-4 pt-3 pt-lg-2 position-fixed start-50 top-0 translate-middle-x">
+        <a class="navbar-brand cursor-big text-white" id="logo" href="{{ route("unfoldbyte") }}">
             <svg viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M18.632 34.4V56.192H18.68C18.68 62.96 24.872 67.952 32.312 67.952C40.04 67.952 46.28 62.528 46.28 55.712C46.28 49.136 40.376 43.616 32.408 43.616C27.896 43.616 25.352 46.256 24.584 46.688V34.4H18.632ZM32.456 48.896C36.968 48.896 40.328 52.112 40.328 55.808C40.328 59.744 36.872 62.528 32.408 62.528C28.088 62.528 24.584 59.888 24.584 56C24.584 51.92 27.992 48.896 32.456 48.896Z"

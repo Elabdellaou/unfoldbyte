@@ -15,6 +15,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Styles -->
         <style>
+                  ::-webkit-scrollbar{
+    display: none;
+}
+body{
+    overflow: hidden !important;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+}
             .btn-outline-unfold {
     font-weight: 400 !important;
     line-height: 19px !important;

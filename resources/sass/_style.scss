@@ -9,7 +9,13 @@
 body::-webkit-scrollbar {
     display: none;
 }
-
+.modal::-webkit-scrollbar{
+    display: none;
+}
+.modal{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+}
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
     /* IE and Edge */
@@ -23,11 +29,6 @@ body {
     overflow-y: hidden;
     font-style: normal;
     font-weight: 700;
-    scroll-behavior: smooth !important;
-    scroll-snap-type: y mandatory !important;
-    section{
-        scroll-snap-align: center !important;
-    }
 }
 .navbar-nav .nav-item button{
     background-color: transparent !important;
@@ -172,14 +173,13 @@ main{
         left: -235%;
     }
 }
-
-#navigation {
+#loading,#navigation {
     .logo {
-        animation: logoanimate 1s ease 1s infinite;
+        animation: logoanimate 2s ease 1s infinite;
 
         &::after,
         &::before {
-            animation: logoanimate 1s ease 1s infinite;
+            animation: logoanimate 2s ease 1s infinite;
         }
     }
 }
@@ -224,9 +224,8 @@ nav {
 #product-page,#project-page{
     .img-h{
         img{
-            min-height: 400px;
-            height: 50vh;
-            max-height: 70vh;
+            // min-height: 400px;
+            max-height: 100vh;
         }
     }
     .section-7{
@@ -246,23 +245,15 @@ nav {
         }
     }
 
-    .section-three,.section-5,.section-1{
-        .content-picture,img{
-            min-height: 50vh;
-            max-height: 60vh;
-        }
-    }
+    // .section-three,.section-5,.section-1{
+    //     .content-picture,img{
+    //         min-height: 50vh;
+    //         max-height: 60vh;
+    //     }
+    // }
     height: fit-content !important;
     overflow: hidden !important;
     padding-top: 105px !important;
-    .content-picture img{
-        filter: grayscale(50%);
-        transition: all 0.3s linear;
-        &:hover{
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-    }
     .title{
         font-weight: 400;
         width: fit-content;
@@ -321,7 +312,7 @@ nav {
 .product-2,
 .product-3,
 .product-4 {
-    height: 100vh !important;
+    min-height: 100vh !important;
 }
 .modal{
     z-index: 1065 !important;
@@ -452,7 +443,7 @@ nav {
         text-decoration: none;
         z-index: 12;
         cursor: pointer;
-        position: relative;
+        // position: relative;
 
         .panel {
             z-index: 12;
@@ -471,11 +462,7 @@ nav {
             width: 100%;
             z-index: 11;
         }
-        &.filter{
-            filter: grayscale(50%) !important;
-        }
         &.show{
-            filter: grayscale(0%) !important;
             .panel {
                 opacity: 1;
                 transform: translate(-50%,-50%);
@@ -516,15 +503,36 @@ nav {
 .clip_team{
     background-color: $first-color;
 }
+
+.team .dev:nth-child(1) .clip_team > div{
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background: url('/images/reda.jfif');
+}
+.team .dev:nth-child(2) .clip_team > div{
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background: url('/images/hihi.jpg') black;
+}
+.team .dev:nth-child(3) .clip_team > div{
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background: url('/images/oussama.jpeg');
+}
+.sub-project .project a span{
+    pointer-events: none !important;
+}
+.team .dev:nth-child(4) .clip_team > div{
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background: url('/images/ibrahim.jpg') ;
+}
 .team .dev .clip_team > div{
-    background: url('/images/download.jfif');
-    background-position: center center;
-    background-size: contain;
     filter: grayscale(100%);
-    transition: all 0.5s linear ;
-    &:hover{
-        filter: grayscale(75%);
-    }
 }
 .team .dev:nth-child(1) .clip_team, .team .dev:nth-child(1) .clip_team > div{
     clip-path: polygon(66% 17%, 89% 6%, 91% 24%, 100% 54%, 93% 94%, 81% 100%, 20% 88%, 0 72%, 8% 8%, 35% 0);
@@ -553,6 +561,11 @@ nav {
         background: linear-gradient(transparent, $first-color2);
         border-radius: 3px;
       }
+}
+.about-4 .container-fluid {
+    height: max-content !important;
+    max-height: max-content !important;
+    min-height: max-content !important;
 }
 .sub-project .project_animate{
     &::-webkit-scrollbar-track {
@@ -618,7 +631,6 @@ object-fit: contain !important;
 //cursor
 #cursor{
     position: fixed;
-    border: 1px solid $first-color;
     border-radius: 50%;
     transform: translate(-50%,-50%);
     mix-blend-mode: difference;
@@ -631,32 +643,7 @@ object-fit: contain !important;
     opacity:0;
     z-index: 1070;
 }
-#cursor.active{
-    transform: translate(-50%,-50%) scale(2);
-}
-//animate down
-.animate-down{
-    .down{
-        border: 1px solid $first-color;
-        width: 0px;
-        height:120px ;
-    }
-}
 
-@keyframes down-animate{
-    0%{
-        opacity: 0;
-        transform: scale(1);
-    }
-    50%{
-        opacity: 1;
-        transform: scale(1.5);
-    }
-    100%{
-        opacity: 0;
-        transform: scale(1);
-    }
-}
 .home-p p{
     font-weight: 400 !important;
     .line{
@@ -673,4 +660,23 @@ object-fit: contain !important;
             top: 100%;
         }
     }
+}
+.project{
+    height: fit-content !important;
+}
+#scrollTop{
+    position: fixed;
+    cursor: pointer;
+    top: 90%;
+    z-index: 1000;
+    color: $first-color2;
+}
+#introduction canvas{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    pointer-events: none;
+    z-index: -1 !important;
+    height: 100% !important;
+    width: 100%;
 }

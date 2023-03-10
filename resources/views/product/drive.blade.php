@@ -6,7 +6,7 @@
         <section class="container-fluid d-flex flex-column align-items-center">
             <div class="mb-5 w-100 row row-cols-1 row-cols-xl-2">
                 <div class="mb-5 div-1">
-                    <h1 class="title cursor-big">Drive</h1>
+                    <h1 class="title cursor-big pb-1">Drive</h1>
                     <span class="p-small pa-1 cursor-big">Car rental management</span>
                 </div>
                 <div class="row row-cols-2 mb-5 div-2">
@@ -26,14 +26,14 @@
                         Product type <br>
                         <span class="p-m">Desktop</span>
                     </span>
-                    <div class="div-btn">
+                    {{-- <div class="div-btn">
                         <button class="btn-outline-unfold cursor-big rounded-pill text-white mt-5" id="view-website"
-                            data-product="Drive">VIEW WEBSITE</button>
-                    </div>
+                            data-product="optic">VIEW WEBSITE</button>
+                    </div> --}}
                 </div>
             </div>
             <section class="content-picture img-1 my-5 d-flex align-items-center section-1">
-                <img src="/images/project1.png" class="w-100 cursor-big" alt="" srcset="">
+                <img src="/images/drive1.bmp" class="w-100 cursor-big" alt="" srcset="">
             </section>
             <section class="section-2">
                 <p class="pj-1 text-center text-lg-start mb-5 my-lg-5">
@@ -48,59 +48,55 @@
                     </span>
                 </p>
                 <p class="p-small pa-6 text-start mb-5 ps-lg-5 my-lg-5 cursor-big">
-                    In a culture where men turn to barbers to achieve the smoothest shave, or to a hairstylist for styling instead of just a cut, it was clear to sought-after men’s grooming expert, Vaughn Acord, that it was time to create a range of men’s products tailored to their needs.
+                    The Drive app is used to register customers and cars with all their information to help the agency run and convert everything digital.
                 </p>
             </section>
             <section class="section-3 section-three">
                 <div class="content-picture pic-1 d-flex align-items-center my-5">
-                    <img class="w-100 cursor-big" src="/images/project3.png" alt="" srcset="">
+                    <img class="w-100 cursor-big" src="/images/drive2.bmp" alt="" srcset="">
                 </div>
                 <div class="d-flex ps-lg-5 align-items-center">
                     <div style="height: fit-content">
-                        <span class="p-big cursor-big mb-5 span-4">SOMETHING COOL</span>
+                        <span class="p-big cursor-big mb-5 span-4">DASHBOARD</span>
                         <br>
                         <span class="p-small cursor-big pa-6">
-                            In a culture where men turn to barbers to achieve the smoothest shave, or to a hairstylist for styling instead of just a cut, it was clear to sought-after men’s grooming expert, Vaughn Acord, that it was time to create a range of men’s products tailored to their needs.
+                            You can see everything that is going on in your agency via this page from the cars that are available to the cars near the return from rent and also your monthly income.
                         </span>
                     </div>
                 </div>
             </section>
             <section class="section-4 section-three">
                 <div class="content-picture pic-2 d-flex align-items-center my-5">
-                    <img class="w-100 cursor-big" src="/images/project3.png" alt="" srcset="">
+                    <img class="w-100 cursor-big" src="/images/drive3.bmp" alt="" srcset="">
                 </div>
                 <div class="d-flex ps-lg-5 align-items-center">
                     <div style="height: fit-content">
-                        <span class="p-big cursor-big mb-5 span-5">SOMETHING COOL</span>
+                        <span class="p-big cursor-big mb-5 span-5">RESERVATION</span>
                         <br>
                         <span class="p-small cursor-big pa-7">
-                            In a culture where men turn to barbers to achieve the smoothest shave, or to a hairstylist for styling instead of just a cut, it was clear to sought-after men’s grooming expert, Vaughn Acord, that it was time to create a range of men’s products tailored to their needs.
+                            Here you can make a car reservation. You can also see all the information about the car with the price of the reservation for day. And you can search by car model or fuel type.
                         </span>
                     </div>
                 </div>
             </section>
             <section class="content-picture img-1 my-5 d-flex align-items-center section-5 ">
-                <img src="/images/project4.png" class="w-100 cursor-big" alt="" srcset="">
+                <img src="/images/drive4.bmp" class="w-100 cursor-big" alt="" srcset="">
             </section>
             <section class="section-6 section-three">
                 <div class="content-picture pic-3 d-flex align-items-center my-5">
-                    <img class="w-100 cursor-big" src="/images/project3.png" alt="" srcset="">
+                    <img class="w-100 cursor-big" src="/images/drive5.bmp" alt="" srcset="">
                 </div>
                 <div class="d-flex ps-lg-5 align-items-center">
                     <div style="height: fit-content">
-                        <span class="p-big cursor-big my-5 span-6">SOMETHING COOL</span>
+                        <span class="p-big cursor-big my-5 span-6">CLIENT LIST</span>
                         <br>
                         <span class="p-small cursor-big pa-8">
-                            In a culture where men turn to barbers to achieve the smoothest shave, or to a hairstylist for styling instead of just a cut, it was clear to sought-after men’s grooming expert, Vaughn Acord, that it was time to create a range of men’s products tailored to their needs.
+                            Here you can see all the customer's details with the possibility of deleting and modifying.
                         </span>
                     </div>
                 </div>
             </section>
             <section class="w-100 my-5 section-7">
-                <div class="w-100 content-picture img-1 pic-4 mb-5">
-                    <img class="cursor-big" src="/images/p6.png" alt="" srcset="">
-                </div>
-                <div class="row row-cols-1 align-items-center justify-content-center justify-content-lg-start  row-cols-md-2 align-items-xl-start">
                     <p class="pj-4 text-center text-lg-start mb-5">
                         <span class="d-flex align-items-center justify-content-center justify-content-lg-start flex-row">
                             <span class="p-small pe-4 cursor-big span-7">OUTCOME</span>
@@ -109,13 +105,11 @@
                             </span>
                         </span>
                         <span class="cursor-big p-big span-9">
-                            EVERYTHING EASY.
+                            YOUR CAR RENTAL AGENCY BETTER.
                         </span>
                     </p>
-                    <div class="content-picture img-mobile pic-5 img-2" style="">
-                        <img class="w-100 h-100 cursor-big" src="/images/project5.png" alt="" srcset="">
+                    <div>
                     </div>
-                </div>
             </section>
             <section
                 class="vh-100 position-relative section-8 footer d-flex justify-content-center align-items-center content-picture">
@@ -126,8 +120,8 @@
                 </svg>
                 <div class="w-100 position-absolute start-50 top-50 translate-middle">
                     <div class="w-100 d-flex flex-column justify-content-center align-items-center">
-                        <a href="#" class="p-small cursor-big text-decoration-none text-white mb-5">Next Project</a>
-                        <h1 class="p-big-footer cursor-big mt-5">ProAccounter</h1>
+                        <a href="{{ route("Product-Optic") }}" class="p-small cursor-big text-decoration-none text-white mb-5">Next Product</a>
+                        <h1 class="p-big-footer cursor-big mt-5 mt-lg-4 mt-xxl-5">ProAccounter</h1>
                         <span class="p-small cursor-big mb-5">Account application</span>
                     </div>
                 </div>

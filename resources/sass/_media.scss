@@ -1,15 +1,9 @@
 //max
-@media (max-width: 1399.99px) {
-    .header_modal_contact .none {
-        display: none !important;
-    }
-}
-
 @media (max-width: 1199.99px) {
+    #scrollTop{
+        left: 95%;
+    }
     .navbar .container-fluid {
-        background:linear-gradient(to right, #080808f5 0.68%, #0d0d0de1 51.89%) !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
         padding-bottom: 5px;
     }
     #product-page,#project-page{
@@ -41,6 +35,23 @@
 }
 
 @media (max-width: 991.99px) {
+    .header_modal_contact .none {
+        display: none !important;
+    }
+    #scrollTop{
+        left: 93%;
+    }
+    #cursor{
+        display: none;
+    }
+    .form .fr{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+    .prod img,
+    .project a img{
+        height: 450px !important;
+    }
     #product-page,#project-page{
         .section-7{
             .img-2{
@@ -55,15 +66,10 @@
             flex-direction:column-reverse;
             .content-picture{
                 img{
-                    min-height: 50vh;
                     max-height: 50vh;
                 }
             }
         }
-    }
-    #cursor{
-        width: 30px;
-        height: 30px;
     }
     .team .dev:nth-child(3) .clip_team,
     .team .dev:nth-child(3) .clip_team>div {
@@ -82,21 +88,19 @@
             width: 100%;
         }
     }
-
-    #panels,
-    #panels2,
-    #panels3 {
-        width: 100% !important;
-    }
-
-    .about-4 .container-fluid {
-        height: max-content !important;
-        max-height: max-content !important;
-        min-height: max-content !important;
-    }
 }
 
 @media (max-width: 767.99px) {
+    #scrollTop{
+        left: 90%;
+    }
+    .sub-about .about-3 .fs-1 {
+        font-size: 1.4rem !important;
+    }
+    .prod img,
+    .project a img{
+            height: 325px !important;
+    }
     #product-page,#project-page{
         .footer{
             a{
@@ -144,6 +148,26 @@
 }
 
 @media (max-width: 575.99px) {
+    #scrollTop{
+        left: 88%;
+    }
+    .sub-about .about-3 .fs-1 {
+        font-size: 0.95rem !important;
+    }
+    .service-content {
+        .left-service {
+            width: 10%;
+        }
+
+        .right-service {
+            width: 90%;
+        }
+    }
+    .prod img,
+    .project a img{
+            height: 285px !important;
+        }
+
     .home-p p{
         font-size: 50px !important;
         line-height: 70px !important;
@@ -182,11 +206,9 @@
             }
         }
     }
-    #cursor{
-        display: none;
-    }
     .sub-project{
         max-height: 1700px !important;
+        min-height: 1320px !important;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             width: 6px;
@@ -286,14 +308,14 @@
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3) {
-                margin-bottom: 1rem !important;
+                margin-bottom: 0.75rem !important;
             }
         }
 
         .body {
             font-size: 0.9rem !important;
             font-weight: 400;
-            margin-top: 1rem;
+            margin-top: 0rem;
         }
 
         .fs-1 {
@@ -302,7 +324,7 @@
         }
 
         .icon {
-            margin-right: 1rem !important;
+            margin-right: 0.5rem !important;
         }
     }
 
@@ -354,9 +376,21 @@
     }
 }
 
-@media(max-width:397.9) {
+@media(max-width:397.9px) {
+    #scrollTop{
+        left: 85%;
+    }
+    .home-p p{
+        font-size: 45px !important;
+        line-height: 55px !important;
+    }
+    .prod img,
+    .project a img{
+        height: 220px !important;
+    }
     .sub-project{
         max-height: 1450px !important;
+        min-height: 1120px !important;
         &::-webkit-scrollbar {
             width: 5px;
         }
@@ -374,8 +408,17 @@
 }
 
 @media (max-width:360px) {
+    .sub-about .about-3{
+        .fs-1 {
+            font-size: 0.75rem !important;
+        }
+    }
+    .prod img,
+    .project a img{
+            height: 185px !important;
+        }
     .home-p p{
-        font-size: 40px !important;
+        font-size: 36px !important;
         line-height: 50px !important;
     }
     .sub-project{
@@ -417,11 +460,16 @@
 }
 
 @media (max-width:297.99px) {
+    .prod img,
+    .project a img{
+        height: 160px !important;
+    }
     .home-p p{
         font-size: 30px !important;
         line-height: 40px !important;
     }
     .sub-project .project_animate {
+        min-height: 931px !important;
         max-height: 1000px !important;
         &::-webkit-scrollbar {
             width: 3px;
@@ -447,7 +495,7 @@
 
     .team .dev .clip_team>div {
         height: 158px;
-        width: 97%;
+        width: 98%;
     }
 
     .products {
@@ -460,7 +508,11 @@
         .role {
             font-size: 12px;
             line-height: 12px;
+            p:nth-child(1){
+                font-size: 11px;
+            }
         }
+
 
         .body {
             margin-top: 1rem;
@@ -592,7 +644,7 @@
     }
 }
 
-//minpx
+//min
 @media (min-width:298px) {
     .me-u5 {
         margin-right: 0px;
@@ -618,6 +670,9 @@
         .role {
             font-size: 13px;
             line-height: 13px;
+            p:nth-child(1){
+                font-size: 12px;
+            }
         }
 
         .body {
@@ -755,6 +810,7 @@
     }
     .sub-project .project_animate{
         max-height: 1840px !important;
+        min-height: 1397px !important;
         overflow-y: scroll;
         overflow-x: hidden;
         &::-webkit-scrollbar {
@@ -820,6 +876,9 @@
         .role {
             font-size: 15px;
             line-height: 15px;
+            p:nth-child(1){
+                font-size: 14px;
+            }
         }
 
         .body {
@@ -847,8 +906,8 @@
     }
 
     .btn-outline-unfold {
-        width: 157px;
-        height: 50px;
+        width: 135px;
+        height: 40px;
         top: 55%;
         font-size: 15px;
     }
@@ -871,7 +930,7 @@
 
         .fs-1 {
             font-weight: 700;
-            font-size: 1.5rem !important;
+            font-size: 1.4rem !important;
         }
 
         .icon {
@@ -912,7 +971,7 @@
 
         &::before {
             font-size: 100px;
-            top: 33%;
+            top: 29%;
         }
     }
 
@@ -934,7 +993,7 @@
     }
 
     .sub-about .about-3::before {
-        top: 33%;
+        top: 29%;
     }
 
     .sub-about {
@@ -980,6 +1039,10 @@
 }
 
 @media (min-width: 768px) {
+    .btn-outline-unfold {
+        width: 140px;
+        height: 43px;
+    }
     .home-p p{
         font-size: 70px !important;
         line-height: 90px !important;
@@ -998,6 +1061,7 @@
     }
     .sub-project .project_animate{
         max-height: 2340px !important;
+        min-height: 1780px !important;
         &::-webkit-scrollbar {
             width: 8px;
         }
@@ -1005,14 +1069,6 @@
             border-radius: 5px;
         }
     }
-    // .modal {
-
-    //     input,
-    //     textarea {
-    //         width: 75% !important;
-    //     }
-    // }
-
     .nav_interested span,
     .nav_project_type span {
         font-size: 22px;
@@ -1031,11 +1087,11 @@
         display: flex;
 
         div {
-            width: 85%;
+            width: 90%;
         }
 
         .left-service {
-            width: 15%;
+            width: 10%;
         }
 
         .right-service {
@@ -1098,7 +1154,7 @@
 
             &:nth-child(1),
             &:nth-child(2) {
-                margin-bottom: 2rem !important;
+                margin-bottom: 1rem !important;
             }
         }
     }
@@ -1193,6 +1249,89 @@
 }
 
 @media (min-width: 992px) {
+    .navbar{
+        position: fixed !important;
+    }
+    .navbar .container-fluid{
+        width: 95% !important;
+    }
+    .container-fluid{
+        width: 82% !important;
+    }
+    // .sub-project .project a.filter{
+    //     filter: grayscale(100%);
+    // }
+    .sub-project .project a .panel{
+        height: 105% !important;
+        width: 105% !important;
+        background: linear-gradient(to top,#0d0d0de1,transparent) !important;
+    }
+    .modal p {
+        margin-bottom: 0.2rem !important;
+        font-size: 14px !important;
+    }
+    .modal {
+        input {
+            height: 50px;
+        }
+
+        textarea {
+            height: 90px;
+            min-height: 90px;
+            max-height: 110px;
+        }
+
+        button {
+            width: 100px !important;
+            height: 50px !important;
+        }
+    }
+    .logo-modal-contact{
+        width: 35px;
+        height: 58.33px;
+    }
+    .modal {
+        .modal-content.container {
+            width: 990px !important;
+            max-width: 990px !important;
+            height: 580px !important;
+            background-color: white !important;
+            .clip_contact{
+                width: 985px !important;
+                max-width: 985px !important;
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+                height: 575px !important;
+            }
+        }
+        .modal-content.container,.clip_contact{
+            clip-path: polygon(45% 3%, 73% 0, 91% 2%, 99% 0, 100% 17%, 99% 44%, 100% 73%, 98% 98%, 84% 96%, 65% 100%,40% 100%,15% 95%,0% 90%,2% 70%,0% 20%, 0 3%, 19% 0);
+        }
+    }
+    .img-project img{
+        min-height: 450px !important;
+    }
+    .content-picture img{
+        transition: all 0.3s linear;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    .team-3{
+        min-height: 100vh !important;
+        .fs-2{
+            font-size:1.5rem !important;
+        }
+        .fs-4{
+            font-size:1rem !important;
+        }
+    }
+    #team .container-fluid{
+        height: 80% !important;
+    }
+    .project a img{
+        height: 280px;
+    }
     .product-2,.product-3,.product-4{
         min-height: 100vh !important;
     }
@@ -1218,9 +1357,6 @@
             }
         }
         .section-7{
-            // .img-1{
-            //     width: 75%;
-            // }
             .img-2{
                 padding-top: 25px;
                 max-width:50%;
@@ -1242,9 +1378,6 @@
         .p-m{
             font-size: 24px !important;
         }
-        .p-big{
-            font-size: 40px;
-        }
         .p-small{
             font-size: 20px;
         }
@@ -1255,9 +1388,13 @@
             }
         }
     }
+    #cursor.active{
+        transform: translate(-50%,-50%) scale(2);
+    }
     #cursor{
-        width: 40px;
-        height: 40px;
+        border: 1px solid $first-color;
+        width: 25px;
+        height: 25px;
     }
     section{
         width: 100%;
@@ -1265,7 +1402,8 @@
     }
 
     .sub-project .project_animate{
-        max-height: 1215px !important;
+        max-height: 927px !important;
+        min-height: 927px !important;
         &::-webkit-scrollbar {
             width: 8px;
         }
@@ -1275,38 +1413,33 @@
     }
     .modal {
         .none {
-            width: 141px !important;
+            width: 85px !important;
         }
 
         input,
         textarea {
             width: 100% !important;
         }
-
-        button {
-            width: 133px !important;
-            height: 67px !important;
-        }
     }
 
     .nav_interested span,
     .nav_project_type span {
-        font-size: 30px;
+        font-size: 25px;
         line-height: 45px;
     }
 
     .me-u5 {
-        margin-right: 45px;
+        margin-right: 40px;
     }
 
     .team .dev .clip_team {
-        width: 400px;
-        height: 277.6px;
+        width: 350px;
+        height: 242.8px;
     }
 
     .team .dev .clip_team>div {
-        width: 394px;
-        height: 271px;
+        width: 344px;
+        height: 237.1px;
     }
 
     .team .dev:nth-child(3) .clip_team,
@@ -1317,12 +1450,6 @@
     .team .dev:nth-child(4) .clip_team,
     .team .dev:nth-child(4) .clip_team>div {
         clip-path: polygon(17% 0, 73% 9%, 100% 24%, 96% 93%, 75% 100%, 42% 90%, 8% 100%, 7% 82%, 0 53%, 8% 7%);
-    }
-
-    .products {
-        .product-title {
-            line-height: 90px;
-        }
     }
 
     .products {
@@ -1341,7 +1468,7 @@
         }
 
         .fs-4 {
-            font-size: 1.5rem !important;
+            font-size: 1.2rem !important;
         }
 
         .mr-unfold {
@@ -1365,12 +1492,6 @@
                 margin-bottom: 2.5rem !important;
             }
         }
-    }
-
-    .about-4 .container-fluid {
-        height: 100vh !important;
-        max-height: 100vh !important;
-        min-height: 100vh !important;
     }
 
     .sub-product .product-1 {
@@ -1434,14 +1555,6 @@
         }
     }
 
-    #panels,
-    #panels2,
-    #panels3,
-    #panels4 {
-        width: 200% !important;
-        height: 100vh !important;
-    }
-
     .sub-team {
         .fs-5 {
             font-size: 0.85rem !important;
@@ -1451,7 +1564,10 @@
             font-size: 2rem !important;
         }
     }
-
+    .products .product-title {
+        font-size: 30px;
+        line-height: 80px;
+    }
     .sub-about {
         .fs-5 {
             font-size: 0.85rem !important;
@@ -1472,19 +1588,11 @@
 
     nav .nav-link {
         font-weight: 700;
-        // font-size: 1.2rem;
         line-height: 21px;
-    }
-
-    .logo-modal-contact {
-        width: 48px;
-        height: 80px;
     }
 
     #logo {
         position: relative;
-        width: 48px;
-        height: 80px;
 
         svg {
             position: absolute;
@@ -1496,6 +1604,33 @@
 }
 
 @media (min-width: 1200px) {
+    .modal {
+        .modal-content.container {
+            .clip_contact{
+                padding-left: 3rem !important;
+                padding-right: 3rem !important;
+            }
+        }
+    }
+    #cursor{
+        width: 30px;
+        height: 30px;
+    }
+    #scrollTop{
+        display: none !important;
+    }
+    .service .service-content {
+        .left-service {
+            width: 15%;
+        }
+
+        .right-service {
+            width: 85%;
+        }
+    }
+    .project a img{
+        height: 305px;
+    }
     .home-p p{
         font-size: 80px !important;
         line-height: 110px !important;
@@ -1508,6 +1643,9 @@
             line-height: 80px;
         }
         .section-7{
+            height:fit-content;
+        }
+        .section-7.mobile{
             height:100vh;
             position: relative;
             .img-1{
@@ -1526,11 +1664,12 @@
             }
         }
         .p-big{
-            font-size: 48px;
+            font-size: 40px;
         }
     }
     .sub-project .project_animate{
         max-height: 1222px !important;
+        min-height: 1222px !important;
         &::-webkit-scrollbar {
             width: 10px;
         }
@@ -1539,31 +1678,9 @@
         margin-right: 55px;
     }
 
-    .modal p {
-        font-size: 20px !important;
-        line-height: 26px !important;
-    }
-
-    .nav_interested span,
-    .nav_project_type span {
-        font-size: 35px;
-        line-height: 48px;
-    }
-
-    .team .dev .clip_team {
-        width: 438px;
-        height: 305px;
-    }
-
-    .team .dev .clip_team>div {
-        width: 432px;
-        height: 297px;
-    }
-
     .products {
         .product-title {
-            font-size: 60px;
-            line-height: 103px;
+            font-size: 40px;
         }
     }
 
@@ -1577,18 +1694,6 @@
     }
 
     .about-4 {
-        // .service {
-
-        //     &:nth-child(1),
-        //     &:nth-child(2) {
-        //         margin-bottom: 3rem !important;
-        //     }
-
-        //     &:nth-child(1),
-        //     &:nth-child(3) {
-        //         margin-right: 1.2rem !important;
-        //     }
-        // }
 
         .body {
             font-size: 1rem !important;
@@ -1596,7 +1701,7 @@
         }
 
         .fs-1 {
-            font-size: 2.5rem !important;
+            font-size: 1.65rem !important;
         }
 
         .icon {
@@ -1631,16 +1736,6 @@
         }
     }
 
-    .sub-team .team-2,
-    .sub-about .about-1,
-    .sub-about .about-2,
-    .sub-about .about-3 {
-        &::before {
-            font-size: 200px;
-            top: 19%;
-        }
-    }
-
     .sub-team .team-2 {
         &::before {
             font-size: 230px;
@@ -1656,9 +1751,47 @@
     .mr-unfold {
         margin-right: 60px !important;
     }
+
 }
 
 @media (min-width: 1400px) {
+    .img-project img {
+        min-height: 490px !important;
+    }
+    #cursor{
+        width: 35px;
+        height: 35px;
+    }
+    .team .dev .clip_team {
+        width: 400px;
+        height: 277.6px;
+    }
+
+    .team .dev .clip_team>div {
+        width: 394px;
+        height: 271px;
+    }
+    .sub-team .team-2,
+    .sub-about .about-1,
+    .sub-about .about-2,
+    .sub-about .about-3 {
+        &::before {
+            font-size: 200px;
+            top: 19%;
+        }
+    }
+    .sub-project {
+        .fs-4 {
+            font-size: 1.5rem !important;
+        }
+    }
+    .btn-outline-unfold {
+        width: 147px;
+        height: 45px;
+    }
+    .project a img{
+        height: 340px;
+    }
     .home-p p{
         font-size: 100px !important;
         line-height: 130px !important;
@@ -1668,20 +1801,57 @@
     }
     .sub-project .project_animate{
         max-height: 1234px !important;
+        min-height: 1234px !important;
         &::-webkit-scrollbar {
             width: 11px;
         }
     }
     .me-u5 {
-        margin-right: 65px;
+        margin-right: 50px;
     }
-
     .nav_interested span,
     .nav_project_type span {
-        font-size: 37px;
-        line-height: 51px;
+        font-size: 27px;
+        line-height: 30px;
+    }
+    .modal {
+        p {
+            margin-bottom: 1rem !important;
+            font-size: 16px !important;
+        }
+        .none {
+            width: 140px !important;
+        }
+        input {
+            height: 60px;
+        }
+
+        textarea {
+            height: 120px;
+            min-height: 120px;
+            max-height: 140px;
+        }
+
+        button {
+            width: 120px !important;
+            height: 60px !important;
+        }
     }
 
+    .modal {
+        .modal-content.container {
+            width: 1112.44px !important;
+            max-width: 1112.44px !important;
+            height: 670px !important;
+            .clip_contact{
+                width: 1107.44px !important;
+                max-width: 1107.44px !important;
+                padding-left: 3rem !important;
+                padding-right: 3rem !important;
+                height: 665px !important;
+            }
+        }
+    }
     .project {
         .img {
             a {
@@ -1689,16 +1859,6 @@
             }
         }
     }
-
-    // .sub-project {
-    //     .fs-2 {
-    //         font-size: 2.25rem !important;
-    //     }
-
-    //     .fs-4 {
-    //         font-size: 1.75rem !important;
-    //     }
-    // }
 
     .mr-unfold {
         margin-right: 65px !important;
@@ -1729,7 +1889,6 @@
             font-size: 2.5rem !important;
         }
     }
-
     .sub-product .product-1 {
 
         &::after,
@@ -1756,17 +1915,12 @@
                 line-height: 60px;
             }
         }
-
-        &::before {
-            font-size: 228px;
-            top: 20%;
-        }
     }
 
     .sub-team .team-2 {
         &::before {
-            font-size: 245px !important;
-            top: 21% !important;
+            font-size: 228px !important;
+            top: 20% !important;
         }
     }
 
@@ -1776,6 +1930,24 @@
 }
 
 @media (min-width: 1600px) {
+    #cursor{
+        width: 40px;
+        height: 40px;
+    }
+    .project a img {
+        height: 415px;
+    }
+    .navbar .container-fluid{
+        width: 90% !important;
+    }
+    .container-fluid{
+        width: 81% !important;
+    }
+    .products {
+        .product-title {
+            line-height: 103px;
+        }
+    }
     .home-p p{
         font-size: 120px !important;
         line-height: 164px !important;
@@ -1787,39 +1959,6 @@
         &::-webkit-scrollbar-thumb {
             border-radius: 6px;
         }
-    }
-    .nav_interested span,
-    .nav_project_type span {
-        font-size: 40px;
-        line-height: 51px;
-    }
-
-    .modal {
-        .modal-content.container {
-            width: 1470px !important;
-            max-width: 1470px !important;
-            height: 876px !important;
-            background-color: white !important;
-            .clip_contact{
-                width: 1465px !important;
-                max-width: 1465px !important;
-                padding-left: 5rem !important;
-                padding-right: 5rem !important;
-                height: 870px !important;
-            }
-        }
-        .modal-content.container,.clip_contact{
-            clip-path: polygon(45% 3%, 73% 0, 91% 2%, 99% 0, 100% 17%, 99% 44%, 100% 73%, 98% 98%, 84% 96%, 65% 100%,40% 100%,15% 95%,0% 90%,2% 70%,0% 20%, 0 3%, 19% 0);
-        }
-    }
-
-    .navbar .container-fluid {
-        width: 90% !important;
-        padding-left: 0% !important;
-        padding-right: 0% !important;
-    }
-    .container-fluid{
-        width: 85% !important;
     }
     #team,#about{
         height: 100vh !important;
@@ -1856,3 +1995,107 @@
         }
     }
 }
+@media (min-width: 1800px) {
+    .team .dev .clip_team {
+        width: 438px;
+        height: 305px;
+    }
+
+    .team .dev .clip_team>div {
+        width: 432px;
+        height: 297px;
+    }
+    .project a img {
+        height: 450px;
+    }
+}
+@media (min-width: 2000px) {
+    .project a img {
+        height: 460px;
+    }
+}
+
+// max height
+@media (max-height:850px) and (min-width:768px) {
+    .sub-product .product-1::before, .sub-team .team-2::before, .sub-about .about-1::before, .sub-about .about-2::before {
+        top: 13% !important;
+    }
+    .sub-about .about-3::before {
+        top: 14% !important;
+    }
+}
+@media (max-height:850px) and (min-width:1200px) {
+    .sub-product .product-1::before{
+        top:7% !important;
+    }
+    .sub-product .product-1::after{
+        top:37% !important;
+    }
+}
+@media (max-height:750px) and (max-width:1200px) {
+    .sub-product .product-1::before{
+        top:12% !important;
+    }
+    .sub-product .product-1::after{
+        top:40% !important;
+    }
+}
+@media (max-height:750px) and (max-width:992px) {
+    .sub-product .product-1::before{
+        top:22% !important;
+    }
+    .sub-product .product-1::after{
+        top:43% !important;
+    }
+}
+@media (max-height:750px) and (max-width:768px) {
+    .sub-product .product-1::before{
+        top:30% !important;
+    }
+    .sub-product .product-1::after{
+        top:48% !important;
+    }
+}
+@media (max-height:650px) and (min-width:1200px) {
+    .sub-product .product-1::before{
+        top:4% !important;
+    }
+    .sub-product .product-1::after{
+        top:36% !important;
+    }
+}
+@media (max-height:650px) and (max-width:1200px){
+    .sub-product .product-1::before{
+        top:27% !important;
+    }
+    .sub-product .product-1::after{
+        top:48% !important;
+    }
+}
+@media (max-height:550px) and (max-width:1200px){
+    .sub-product .product-1::before{
+        top:25% !important;
+    }
+}
+@media (max-height:450px) and (max-width:1200px){
+    .sub-product .product-1::before{
+        top:20% !important;
+    }
+}
+@media (max-height:400px) and (max-width:1200px){
+    .sub-product .product-1::before{
+        top:15% !important;
+    }
+    .sub-product .product-1::after{
+        top:45% !important;
+    }
+}
+@media (max-height:370px) and (max-width:1200px){
+    .sub-product .product-1::before{
+        top:5% !important;
+    }
+    .sub-product .product-1::after{
+        top:40% !important;
+    }
+}
+
